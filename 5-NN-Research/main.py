@@ -65,9 +65,9 @@ class model_params():
 			self.activation_4= 'relu'
 
 		if (args['Activation Function Layer 5']):
-			self.activation_4 =  (args['Activation Function Layer 5'])
+			self.activation_5 =  (args['Activation Function Layer 5'])
 		else:
-			self.activation_4= 'softmax'
+			self.activation_5= 'softmax'
 	
 
 
@@ -137,15 +137,21 @@ def large_CNN(params):
 	return model
 
 #/********************************************************************************************* 
-def get_data ():
+def get_data (param):
 	# load data
 	(X_train, y_train), (X_test, y_test) = mnist.load_data()
 
 
 	# flatten 28*28 images to a 784 vector for each image
 	num_pixels = X_train.shape[1] * X_train.shape[2]
-	X_train = X_train.reshape(X_train.shape[0], num_pixels).astype('float32')
-	X_test = X_test.reshape(X_test.shape[0], num_pixels).astype('float32')
+
+	if(params=='simple_NN'):
+		X_train = X_train.reshape(X_train.shape[0], num_pixels).astype('float32')
+		X_test = X_test.reshape(X_test.shape[0], num_pixels).astype('float32')
+	else:
+		# reshape to be [samples][pixels][width][height]
+		X_train = X_train.reshape(X_train.shape[0], 1, 28, 28).astype('float32')
+		X_test = X_test.reshape(X_test.shape[0], 1, 28, 28).astype('float32')
 
 	# normalize inputs from 0-255 to 0-1
 	X_train = X_train / 255
@@ -175,7 +181,7 @@ def run_evaluation(model, X_train, y_train, X_test, y_test,params):
 
 	start = time.time()
 
-	model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=1, batch_size=200, verbose=2)
+	model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=2, batch_size=200, verbose=2)
 	end = time.time()
 	print ("Training Time : " , end - start)
 	file.write ("Training Time : " + str(end - start))
@@ -200,8 +206,8 @@ def run_evaluation(model, X_train, y_train, X_test, y_test,params):
 def write_label(file,params):
 
 	
-	file.write("Test: " + params.neural_network + " \n"))
-	file.write("Optimization: " + params.optimizator + " \n"))
+	file.write("Test: " + params.neural_network + " \n")
+	file.write("Optimization: " + params.optimizator + " \n")
 
 	file.write("L1 : " + params.activation_1 + " \n")
 	file.write("L2 : " + params.activation_2 + " \n")
@@ -231,7 +237,7 @@ if __name__ == '__main__':
 	
 
 	#Get model data from minst
-	X_train, y_train, X_test, y_test, num_pixels , num_classes= get_data()
+	X_train, y_train, X_test, y_test, num_pixels , num_classes= get_data(params.neural_network)
 
 	
 	# Build the model
