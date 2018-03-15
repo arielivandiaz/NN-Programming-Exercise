@@ -9,13 +9,14 @@ from keras import backend
 import argparse
 import time
 
+#/********************************************************************************************* 
 class model_params():
 
 	neural_network = 0
 	optimizator = 0
-	activation_1 = 2
-	activation_2 = 3
-	activation_3 = 4
+	activation_1 = 0
+	activation_2 = 0
+	activation_3 = 0
 
 	def __init__ (self):
 
@@ -59,15 +60,7 @@ class model_params():
 #/*********************************************************************************************    
 def get_args():
 
-	#NN = simple/cnn/large
-	#optimization= grad
-	#activation1= relu
-	#activation2= soft
-	# ....
-	#activationN = ....
 	
-
-
 	parser = argparse.ArgumentParser(description='OSM  UTN FRBB')
 
 	
@@ -79,13 +72,12 @@ def get_args():
 	parser.add_argument('Activation Function Layer 4', default='relu', nargs='?')
 
 
-
-	
 	return vars(parser.parse_args())
 	
 
 
 # define baseline model
+#/********************************************************************************************* 
 def simple_NN(params):
 	activa= 'relu'
 	# create model
@@ -99,36 +91,37 @@ def simple_NN(params):
 	model.compile(loss='categorical_crossentropy', optimizer=params.optimizator, metrics=['accuracy'])
 	return model
 
-def simple_CNN(activation_1,activation_2,activation_3,set_optimizer):
+def simple_CNN(params):
 	# create model
 	model = Sequential()
-	model.add(Conv2D(32, (5, 5), input_shape=(1, 28, 28), activation='relu'))
+	model.add(Conv2D(32, (5, 5), input_shape=(1, 28, 28), activation=params.activation_1))
 	model.add(MaxPooling2D(pool_size=(2, 2)))
 	model.add(Dropout(0.2))
 	model.add(Flatten())
-	model.add(Dense(128, activation='relu'))
-	model.add(Dense(num_classes, activation='softmax'))
+	model.add(Dense(128, activation=params.activation_2))
+	model.add(Dense(num_classes, activation=params.activation_3))
 	# Compile model
-	model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+	model.compile(loss='categorical_crossentropy', optimizer=params.optimizator, metrics=['accuracy'])
 	return model
 
 # define the larger model
-def large_CNN(activation_1,activation_2,activation_3,set_optimizer):
+def large_CNN(params):
 	# create model
 	model = Sequential()
-	model.add(Conv2D(30, (5, 5), input_shape=(1, 28, 28), activation='relu'))
+	model.add(Conv2D(30, (5, 5), input_shape=(1, 28, 28), activation=params.activation_1))
 	model.add(MaxPooling2D(pool_size=(2, 2)))
-	model.add(Conv2D(15, (3, 3), activation='relu'))
+	model.add(Conv2D(15, (3, 3), activation=params.activation_2))
 	model.add(MaxPooling2D(pool_size=(2, 2)))
 	model.add(Dropout(0.2))
 	model.add(Flatten())
-	model.add(Dense(128, activation='relu'))
-	model.add(Dense(50, activation='relu'))
-	model.add(Dense(num_classes, activation='softmax'))
+	model.add(Dense(128, activation=params.activation_3))
+	model.add(Dense(50, activation=params.activation_4))
+	model.add(Dense(num_classes, activation=params.activation_5))
 	# Compile model
-	model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+	model.compile(loss='categorical_crossentropy', optimizer=params.optimizator, metrics=['accuracy'])
 	return model
 
+#/********************************************************************************************* 
 def get_data ():
 	# load data
 	(X_train, y_train), (X_test, y_test) = mnist.load_data()
@@ -156,10 +149,14 @@ def get_data ():
 
 	return 	X_train, y_train, X_test, y_test, num_pixels, num_classes
 
-def run_evaluation(model, X_train, y_train, X_test, y_test):
+
+#/********************************************************************************************* 
+def run_evaluation(model, X_train, y_train, X_test, y_test,params):
 
 
 	file = open('output.txt', 'a')
+
+	write_label(file,params)
 
 	start = time.time()
 	model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=1, batch_size=200, verbose=2)
@@ -174,7 +171,6 @@ def run_evaluation(model, X_train, y_train, X_test, y_test):
 	print ("Evaluation Time : " , end - start)
 	file.write ("Evaluation Time : " + str(end - start))
 	file.write ("\t\n")
-
 	
 
 	print("Baseline Error: %.2f%%" % (100-scores[1]*100))
@@ -183,6 +179,26 @@ def run_evaluation(model, X_train, y_train, X_test, y_test):
 	file.write ("\t\n")
 
 	file.close()
+	
+#/********************************************************************************************* 
+def write_label(file,params):
+
+	
+	file.write("Test: " + params.neural_network)
+	file.write("Optimization: " + params.optimizator)
+
+	file.write("L1 : " + params.activation_1 " \n")
+	file.write("L2 : " + params.activation_2 " \n")
+
+	if (params.neural_network=='simple_CNN'):
+		file.write("L3 : " + params.activation_3 " \n")
+
+	elif (params.neural_network=='large_CNN'):
+		file.write("L3 : " + params.activation_3 " \n")
+		file.write("L4 : " + params.activation_4 " \n")
+		file.write("L5 : " + params.activation_5 " \n")
+
+
 
 
 
@@ -203,16 +219,17 @@ if __name__ == '__main__':
 
 	
 	# Build the model
-	if(params.neural_network=='Simple_NN'):
+	if(params.neural_network=='simple_NN'):
 		model = simple_NN(params)
 		
-	elif (params.neural_network=='Simple_CNN'):
-		model = simple_NN(params)
-	elif (params.neural_network=='Large_CNN'):
-		model = simple_NN(params)
+	elif (params.neural_network=='simple_CNN'):
+		model = simple_CNN(params)
+
+	elif (params.neural_network=='large_CNN'):
+		model = large_CNN(params)
 
 	# Fit the model, run evaluation and get output file
-	run_evaluation(model, X_train, y_train, X_test, y_test)
+	run_evaluation(model, X_train, y_train, X_test, y_test,params)
 
 	# Clean up
 	backend.clear_session()

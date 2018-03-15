@@ -1,3 +1,0 @@
-Training Time : 30.66398310661316	
-Evaluation Time : 3.2955007553100586	
-Baseline Error: 90.20%	

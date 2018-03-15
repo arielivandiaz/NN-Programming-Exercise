@@ -1,0 +1,1 @@
+python main.py simple_CNN adam relu relu softmax

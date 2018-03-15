@@ -1,0 +1,1 @@
+python main.py simple_NN adam relu softmax
