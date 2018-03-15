@@ -200,8 +200,8 @@ def run_evaluation(model, X_train, y_train, X_test, y_test,params):
 def write_label(file,params):
 
 	
-	file.write("Test: " + params.neural_network + " \n"))
-	file.write("Optimization: " + params.optimizator + " \n"))
+	file.write("Test: " + params.neural_network + " \n")
+	file.write("Optimization: " + params.optimizator + " \n")
 
 	file.write("L1 : " + params.activation_1 + " \n")
 	file.write("L2 : " + params.activation_2 + " \n")

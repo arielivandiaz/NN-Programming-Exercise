@@ -1,0 +1,5 @@
+Test: simple_CNN 
+Optimization: adam 
+L1 : relu 
+L2 : relu 
+L3 : softmax 
