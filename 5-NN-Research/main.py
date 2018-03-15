@@ -4,6 +4,7 @@ from keras.models import Sequential
 from keras.layers import Dense
 from keras.layers import Dropout
 from keras.utils import np_utils
+
 from keras import backend
 
 import argparse
@@ -187,16 +188,16 @@ def write_label(file,params):
 	file.write("Test: " + params.neural_network)
 	file.write("Optimization: " + params.optimizator)
 
-	file.write("L1 : " + params.activation_1 " \n")
-	file.write("L2 : " + params.activation_2 " \n")
+	file.write("L1 : " + params.activation_1 + " \n")
+	file.write("L2 : " + params.activation_2 + " \n")
 
 	if (params.neural_network=='simple_CNN'):
-		file.write("L3 : " + params.activation_3 " \n")
+		file.write("L3 : " + params.activation_3 +" \n")
 
 	elif (params.neural_network=='large_CNN'):
-		file.write("L3 : " + params.activation_3 " \n")
-		file.write("L4 : " + params.activation_4 " \n")
-		file.write("L5 : " + params.activation_5 " \n")
+		file.write("L3 : " + params.activation_3 +" \n")
+		file.write("L4 : " + params.activation_4 +" \n")
+		file.write("L5 : " + params.activation_5 +" \n")
 
 
 
