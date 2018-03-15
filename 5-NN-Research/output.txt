@@ -1,7 +1,0 @@
-Test: simple_NNOptimization: adamL1 : relu 
-L2 : softmax 
-Test: simple_NNOptimization: adamL1 : relu 
-L2 : softmax 
-Training Time : 8.51552009583	
-Evaluation Time : 0.733565092087	
-Baseline Error: 16.73%	

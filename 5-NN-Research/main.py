@@ -24,6 +24,8 @@ class model_params():
 	activation_1 = 0
 	activation_2 = 0
 	activation_3 = 0
+	activation_4 = 0
+	activation_5 = 0
 
 	def __init__ (self):
 
@@ -61,6 +63,11 @@ class model_params():
 			self.activation_4 =  (args['Activation Function Layer 4'])
 		else:
 			self.activation_4= 'relu'
+
+		if (args['Activation Function Layer 5']):
+			self.activation_4 =  (args['Activation Function Layer 5'])
+		else:
+			self.activation_4= 'softmax'
 	
 
 
@@ -77,6 +84,7 @@ def get_args():
 	parser.add_argument('Activation Function Layer 2', default='relu', nargs='?')
 	parser.add_argument('Activation Function Layer 3', default='relu', nargs='?')
 	parser.add_argument('Activation Function Layer 4', default='relu', nargs='?')
+	parser.add_argument('Activation Function Layer 5', default='softmax', nargs='?')
 
 
 	return vars(parser.parse_args())
@@ -86,7 +94,7 @@ def get_args():
 # define baseline model
 #/********************************************************************************************* 
 def simple_NN(params):
-	activa= 'relu'
+	
 	# create model
 	model = Sequential()
 	#input_function=
@@ -166,6 +174,7 @@ def run_evaluation(model, X_train, y_train, X_test, y_test,params):
 	write_label(file,params)
 
 	start = time.time()
+
 	model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=1, batch_size=200, verbose=2)
 	end = time.time()
 	print ("Training Time : " , end - start)
@@ -191,8 +200,8 @@ def run_evaluation(model, X_train, y_train, X_test, y_test,params):
 def write_label(file,params):
 
 	
-	file.write("Test: " + params.neural_network)
-	file.write("Optimization: " + params.optimizator)
+	file.write("Test: " + params.neural_network + " \n"))
+	file.write("Optimization: " + params.optimizator + " \n"))
 
 	file.write("L1 : " + params.activation_1 + " \n")
 	file.write("L2 : " + params.activation_2 + " \n")
