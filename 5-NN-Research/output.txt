@@ -1,0 +1,28 @@
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : relu 
+L2 : softmax 
+Training Time : 81.3768918514	
+Evaluation Time : 0.749836921692	
+Baseline Error: 7.35%	
+###############################################################
+Test: simple_CNN 
+Optimization: adam 
+L1 : relu 
+L2 : relu 
+L3 : softmax 
+Training Time : 1082.128829	
+Evaluation Time : 10.8744928837	
+Baseline Error: 3.19%	
+###############################################################
+Test: large_CNN 
+Optimization: adam 
+L1 : relu 
+L2 : relu 
+L3 : relu 
+L4 : relu 
+L5 : softmax 
+Training Time : 1176.75582409	
+Evaluation Time : 11.5049180984	
+Baseline Error: 2.60%	
