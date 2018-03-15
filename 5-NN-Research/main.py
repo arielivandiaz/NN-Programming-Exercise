@@ -181,7 +181,7 @@ def run_evaluation(model, X_train, y_train, X_test, y_test,params):
 
 	start = time.time()
 
-	model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=2, batch_size=200, verbose=2)
+	model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=10, batch_size=200, verbose=2)
 	end = time.time()
 	print ("Training Time : " , end - start)
 	file.write ("Training Time : " + str(end - start))
@@ -205,7 +205,7 @@ def run_evaluation(model, X_train, y_train, X_test, y_test,params):
 #/********************************************************************************************* 
 def write_label(file,params):
 
-	
+	file.write("###############################################################\n")
 	file.write("Test: " + params.neural_network + " \n")
 	file.write("Optimization: " + params.optimizator + " \n")
 
