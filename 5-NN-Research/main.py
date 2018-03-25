@@ -200,7 +200,7 @@ def run_evaluation(model, X_train, y_train, X_test, y_test,params):
 	file.write ("Training Time : " + str(end - start))
 	file.write ("\t\n")
 
-	file_c(str(end - start)+"\t")
+	file_c.write(str(end - start)+"\t")
 
 	start = time.time()
 	scores = model.evaluate(X_test, y_test, verbose=1)
@@ -220,6 +220,7 @@ def run_evaluation(model, X_train, y_train, X_test, y_test,params):
 	file_c.write ("%.2f%%" % (100-scores[1]*100)+ "\t")
 
 	file.close()
+	file_c.close()
 	
 #/********************************************************************************************* 
 def write_label(file,params):
@@ -294,7 +295,7 @@ def test3_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 
 	#Best Activations for test1_NN
 	activations_1 = ['relu','selu','tanh','linear','elu']
-	params.activation_2= = 'softmax'
+	params.activation_2 = 'softmax'
 	params.optimizator='nadam'
 
 	loss_function = ['mean_squared_error','mean_absolute_error','mean_absolute_percentage_error','mean_squared_logarithmic_error','squared_hinge','hinge','categorical_hinge','logcosh','categorical_crossentropy','sparse_categorical_crossentropy','binary_crossentropy','kullback_leibler_divergence','poisson','cosine_proximity']
