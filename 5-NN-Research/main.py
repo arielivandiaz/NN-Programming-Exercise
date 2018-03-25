@@ -231,7 +231,7 @@ def write_label(file,params):
 
 
 
-def test_NN (params):
+def test_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classe):
 
 	activations = ['relu','softmax','tahn','sigmoid','hard_sigoid','linear','selu','softplus','softsing','elu']
 
@@ -259,7 +259,7 @@ if __name__ == '__main__':
 	#Get model data from minst
 	X_train, y_train, X_test, y_test, num_pixels , num_classes= get_data(params.neural_network)
 
-	test_NN(params)
+	test_NN(params,X_train, y_train, X_test, y_test, num_pixels , num_classe)
 
 	"""
 	# Build the model
