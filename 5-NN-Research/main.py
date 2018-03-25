@@ -259,7 +259,10 @@ if __name__ == '__main__':
 	#Get model data from minst
 	X_train, y_train, X_test, y_test, num_pixels , num_classes= get_data(params.neural_network)
 
+
+
 	test_NN(params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
+
 
 	"""
 	# Build the model
