@@ -237,11 +237,11 @@ def test_NN (params):
 
 	for i in activations:
 		params.activation_1=i
-			for j in activations:				
-				params.activation_2=j
-				model = simple_NN(params)
-				run_evaluation(model, X_train, y_train, X_test, y_test,params)
-				backend.clear_session()
+		for j in activations:				
+			params.activation_2=j
+			model = simple_NN(params)
+			run_evaluation(model, X_train, y_train, X_test, y_test,params)
+			backend.clear_session()
 
 
 if __name__ == '__main__':
