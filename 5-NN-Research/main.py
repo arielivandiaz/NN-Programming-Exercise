@@ -181,7 +181,7 @@ def get_data (param):
 
 
 #/********************************************************************************************* 
-def run_evaluation(model, X_train, y_train, X_test, y_test,params):
+def run_evaluation(model, X_train, y_train, X_test, y_test,params,b_size,n_epochs):
 
 
 	file = open('output.txt', 'a')
@@ -279,7 +279,7 @@ def test1_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 		for j in activations:				
 			params.activation_2=j
 			model = simple_NN(params)
-			run_evaluation(model, X_train, y_train, X_test, y_test,params)
+			run_evaluation(model, X_train, y_train, X_test, y_test,params,200,5)
 			backend.clear_session()
 
 def test2_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes):
@@ -297,7 +297,7 @@ def test2_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 		for j in op_function:				
 			params.optimizator=j
 			model = simple_NN(params)
-			run_evaluation(model, X_train, y_train, X_test, y_test,params)
+			run_evaluation(model, X_train, y_train, X_test, y_test,params,200,5)
 			backend.clear_session()
 
 def test3_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes):
@@ -316,7 +316,7 @@ def test3_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 			print (j)
 			print ("\n")
 			model = simple_NN(params)
-			if run_evaluation(model, X_train, y_train, X_test, y_test,params):
+			if run_evaluation(model, X_train, y_train, X_test, y_test,params,200,5):
 				print ("all okey!")
 			else:
 				print ("NOT ALL OK =(")
@@ -324,6 +324,26 @@ def test3_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 		backend.clear_session()
 	backend.clear_session()		
 
+def test4_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes):
+
+	#Best Activations for test1_NN
+	activations_1 = ['relu','selu','tanh','linear','elu']
+	params.activation_2 = 'softmax'
+	params.optimizator='nadam'
+
+	loss_function = 'binary_crossentropy'
+
+	for i in range (len(activations_1)):
+		params.activation_1=activations_1[i]	
+		for j in range(1,20):				
+			params.loss=loss_function
+			model = simple_NN(params)
+			if run_evaluation(model, X_train, y_train, X_test, y_test,params,200,j):
+				print ("all okey!")
+			else:
+				print ("NOT ALL OK =(")
+			backend.clear_session()
+	
 
 
 
@@ -345,7 +365,7 @@ if __name__ == '__main__':
 
 
 
-	test3_NN(params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
+	test4_NN(params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 
 
 	"""
