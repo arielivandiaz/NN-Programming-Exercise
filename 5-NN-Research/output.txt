@@ -574,3 +574,155 @@ L2 : softplus
 Training Time : 35.5730149746	
 Evaluation Time : 0.707196950912	
 Baseline Error: 8.78%	
+###############################################################
+Test: simple_NN 
+Optimization: adagrad 
+L1 : linear 
+L2 : softplus 
+Training Time : 33.8683550358	
+Evaluation Time : 0.709412097931	
+Baseline Error: 10.03%	
+###############################################################
+Test: simple_NN 
+Optimization: adadelta 
+L1 : linear 
+L2 : softplus 
+Training Time : 43.6526319981	
+Evaluation Time : 0.705394983292	
+Baseline Error: 46.13%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : linear 
+L2 : softplus 
+Training Time : 40.2884418964	
+Evaluation Time : 0.719636917114	
+Baseline Error: 8.53%	
+###############################################################
+Test: simple_NN 
+Optimization: adamax 
+L1 : linear 
+L2 : softplus 
+Training Time : 38.6158800125	
+Evaluation Time : 0.728717088699	
+Baseline Error: 9.29%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : linear 
+L2 : softplus 
+Training Time : 43.5493140221	
+Evaluation Time : 0.724989891052	
+Baseline Error: 8.04%	
+###############################################################
+Test: simple_NN 
+Optimization: sgd 
+L1 : elu 
+L2 : softplus 
+Training Time : 31.6883099079	
+Evaluation Time : 0.723141908646	
+Baseline Error: 88.65%	
+###############################################################
+Test: simple_NN 
+Optimization: rmsprop 
+L1 : elu 
+L2 : softplus 
+Training Time : 36.3503301144	
+Evaluation Time : 0.712260007858	
+Baseline Error: 8.80%	
+###############################################################
+Test: simple_NN 
+Optimization: adagrad 
+L1 : elu 
+L2 : softplus 
+Training Time : 34.5849919319	
+Evaluation Time : 0.728302001953	
+Baseline Error: 9.98%	
+###############################################################
+Test: simple_NN 
+Optimization: adadelta 
+L1 : elu 
+L2 : softplus 
+Training Time : 44.5029211044	
+Evaluation Time : 0.718261957169	
+Baseline Error: 46.13%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : elu 
+L2 : softplus 
+Training Time : 40.9380390644	
+Evaluation Time : 0.72169303894	
+Baseline Error: 8.74%	
+###############################################################
+Test: simple_NN 
+Optimization: adamax 
+L1 : elu 
+L2 : softplus 
+Training Time : 39.5757808685	
+Evaluation Time : 0.720417022705	
+Baseline Error: 9.20%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : elu 
+L2 : softplus 
+Training Time : 44.1004049778	
+Evaluation Time : 0.708000898361	
+Baseline Error: 8.53%	
+###############################################################
+Test: simple_NN 
+Optimization: sgd 
+L1 : relu 
+L2 : softmax 
+Training Time : 32.0072441101	
+Evaluation Time : 0.72512793541	
+Baseline Error: 88.65%	
+###############################################################
+Test: simple_NN 
+Optimization: rmsprop 
+L1 : relu 
+L2 : softmax 
+Training Time : 36.4526250362	
+Evaluation Time : 0.718414068222	
+Baseline Error: 8.96%	
+###############################################################
+Test: simple_NN 
+Optimization: adagrad 
+L1 : relu 
+L2 : softmax 
+Training Time : 34.6976120472	
+Evaluation Time : 0.714022874832	
+Baseline Error: 11.51%	
+###############################################################
+Test: simple_NN 
+Optimization: adadelta 
+L1 : relu 
+L2 : softmax 
+Training Time : 44.4285879135	
+Evaluation Time : 0.7375831604	
+Baseline Error: 41.03%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : relu 
+L2 : softmax 
+Training Time : 40.7809488773	
+Evaluation Time : 0.718742132187	
+Baseline Error: 8.99%	
+###############################################################
+Test: simple_NN 
+Optimization: adamax 
+L1 : relu 
+L2 : softmax 
+Training Time : 39.5018770695	
+Evaluation Time : 0.71751999855	
+Baseline Error: 9.40%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : relu 
+L2 : softmax 
+Training Time : 44.0381970406	
+Evaluation Time : 0.726850032806	
+Baseline Error: 7.28%	
