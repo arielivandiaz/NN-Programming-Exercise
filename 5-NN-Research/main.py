@@ -231,7 +231,7 @@ def write_label(file,params):
 
 
 
-def test_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes):
+def test1_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes):
 
 	activations = ['relu','softmax','tanh','sigmoid','hard_sigmoid','linear','selu','softplus','softsign','elu']
 
@@ -242,6 +242,25 @@ def test_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes):
 			model = simple_NN(params)
 			run_evaluation(model, X_train, y_train, X_test, y_test,params)
 			backend.clear_session()
+
+def test2_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes):
+
+	#Best Activations for test1_NN
+	activations_1 = ['selu','selu','tanh','softsign','linear','selu','elu','softsign','tanh','softsign','linear','elu','relu']
+	activations_2 = ['softmax','sigmoid','softmax','softmax','softmax','softplus','softmax','softplus','softplus','sigmoid','softplus','softplus','softmax']
+
+
+	op_function = ['sgd','rmsprop','adagrad','adadelta','adam','adamax','nadam']
+
+	for i in range (len(activations_1)):
+		params.activation_1=activations_1[i]
+		params.activation_2=activations_2[i]
+		for j in op_function:				
+			params.optimizator=j
+			model = simple_NN(params)
+			run_evaluation(model, X_train, y_train, X_test, y_test,params)
+			backend.clear_session()
+
 
 
 if __name__ == '__main__':
@@ -261,7 +280,7 @@ if __name__ == '__main__':
 
 
 
-	test_NN(params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
+	test2_NN(params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 
 
 	"""
