@@ -185,16 +185,22 @@ def run_evaluation(model, X_train, y_train, X_test, y_test,params):
 
 
 	file = open('output.txt', 'a')
+	file_c = open('csv.txt', 'a')
 
 	write_label(file,params)
+	write_label_csv(file_c,params)
 
 	start = time.time()
 
 	model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=5, batch_size=200, verbose=2)
+
 	end = time.time()
+
 	print ("Training Time : " , end - start)
 	file.write ("Training Time : " + str(end - start))
 	file.write ("\t\n")
+
+	file_c(str(end - start)+"\t")
 
 	start = time.time()
 	scores = model.evaluate(X_test, y_test, verbose=1)
@@ -202,12 +208,16 @@ def run_evaluation(model, X_train, y_train, X_test, y_test,params):
 	print ("Evaluation Time : " , end - start)
 	file.write ("Evaluation Time : " + str(end - start))
 	file.write ("\t\n")
-	
+
+
+	file_c.write (str(end - start)+"\t")
 
 	print("Baseline Error: %.2f%%" % (100-scores[1]*100))
 
 	file.write("Baseline Error: %.2f%%" % (100-scores[1]*100))
 	file.write ("\t\n")
+
+	file_c.write ("%.2f%%" % (100-scores[1]*100)+ "\t")
 
 	file.close()
 	
@@ -228,6 +238,25 @@ def write_label(file,params):
 		file.write("L3 : " + params.activation_3 +" \n")
 		file.write("L4 : " + params.activation_4 +" \n")
 		file.write("L5 : " + params.activation_5 +" \n")
+
+#/********************************************************************************************* 
+def write_label_csv(file,params):
+
+
+	file.write("Test: " + params.neural_network + " \t")
+	file.write("Optimization: " + params.optimizator + " \t")
+
+	file.write("L1 : " + params.activation_1 + " \t")
+	file.write("L2 : " + params.activation_2 + " \t")
+
+	if (params.neural_network=='simple_CNN'):
+		file.write("L3 : " + params.activation_3 +" \t")
+
+	elif (params.neural_network=='large_CNN'):
+		file.write("L3 : " + params.activation_3 +" \t")
+		file.write("L4 : " + params.activation_4 +" \t")
+		file.write("L5 : " + params.activation_5 +" \t")
+	file.write("\n")
 
 
 
@@ -261,6 +290,25 @@ def test2_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 			run_evaluation(model, X_train, y_train, X_test, y_test,params)
 			backend.clear_session()
 
+def test3_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes):
+
+	#Best Activations for test1_NN
+	activations_1 = ['relu','selu','tanh','linear','elu']
+	params.activation_2= = 'softmax'
+	params.optimizator='nadam'
+
+	loss_function = ['mean_squared_error','mean_absolute_error','mean_absolute_percentage_error','mean_squared_logarithmic_error','squared_hinge','hinge','categorical_hinge','logcosh','categorical_crossentropy','sparse_categorical_crossentropy','binary_crossentropy','kullback_leibler_divergence','poisson','cosine_proximity']
+
+	for i in range (len(activations_1)):
+		params.activation_1=activations_1[i]	
+		for j in loss_function:				
+			params.loss=j
+			model = simple_NN(params)
+			run_evaluation(model, X_train, y_train, X_test, y_test,params)
+			backend.clear_session()
+
+
+
 
 
 if __name__ == '__main__':
@@ -280,7 +328,7 @@ if __name__ == '__main__':
 
 
 
-	test2_NN(params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
+	test3_NN(params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 
 
 	"""
