@@ -307,12 +307,14 @@ def test3_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 	params.activation_2 = 'softmax'
 	params.optimizator='nadam'
 
-	loss_function = ['mean_squared_error','mean_absolute_error','mean_absolute_percentage_error','mean_squared_logarithmic_error','squared_hinge','hinge','categorical_hinge','logcosh','categorical_crossentropy','sparse_categorical_crossentropy','kullback_leibler_divergence','poisson','cosine_proximity']
+	loss_function = ['mean_squared_error','mean_absolute_error','mean_absolute_percentage_error','mean_squared_logarithmic_error','squared_hinge','hinge','categorical_hinge','logcosh','categorical_crossentropy','binary_crossentropy','kullback_leibler_divergence','poisson']
 
 	for i in range (len(activations_1)):
 		params.activation_1=activations_1[i]	
 		for j in loss_function:				
 			params.loss=j
+			print (j)
+			print ("\n")
 			model = simple_NN(params)
 			if run_evaluation(model, X_train, y_train, X_test, y_test,params):
 				print ("all okey!")

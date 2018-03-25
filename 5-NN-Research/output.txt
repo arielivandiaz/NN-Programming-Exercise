@@ -175,3 +175,858 @@ Optimization: nadam
 L1 : selu 
 L2 : softmax 
 Loss : sparse_categorical_crossentropy 
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : mean_squared_error 
+Training Time : 43.7531559467	
+Evaluation Time : 0.744359016418	
+Baseline Error: 7.86%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : mean_absolute_error 
+Training Time : 43.5310869217	
+Evaluation Time : 0.761348962784	
+Baseline Error: 8.04%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : mean_absolute_percentage_error 
+Training Time : 43.2650899887	
+Evaluation Time : 0.732834815979	
+Baseline Error: 7.90%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : mean_squared_logarithmic_error 
+Training Time : 43.5908398628	
+Evaluation Time : 0.735497951508	
+Baseline Error: 7.85%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : squared_hinge 
+Training Time : 43.3701219559	
+Evaluation Time : 0.757890939713	
+Baseline Error: 7.72%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : hinge 
+Training Time : 43.637665987	
+Evaluation Time : 0.729873180389	
+Baseline Error: 8.44%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : categorical_hinge 
+Training Time : 43.9125490189	
+Evaluation Time : 0.732260942459	
+Baseline Error: 7.74%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : logcosh 
+Training Time : 43.4928929806	
+Evaluation Time : 0.744653940201	
+Baseline Error: 7.79%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : categorical_crossentropy 
+Training Time : 43.7726449966	
+Evaluation Time : 0.733960151672	
+Baseline Error: 7.65%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : sparse_categorical_crossentropy 
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : sparse_categorical_crossentropy 
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : sparse_categorical_crossentropy 
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : mean_squared_error 
+Training Time : 43.6046500206	
+Evaluation Time : 0.748682975769	
+Baseline Error: 7.86%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : mean_absolute_error 
+Training Time : 43.6470899582	
+Evaluation Time : 0.744212150574	
+Baseline Error: 8.04%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : mean_absolute_percentage_error 
+Training Time : 43.248745203	
+Evaluation Time : 0.732674837112	
+Baseline Error: 7.90%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : mean_squared_logarithmic_error 
+Training Time : 43.5655710697	
+Evaluation Time : 0.719657897949	
+Baseline Error: 7.85%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : squared_hinge 
+Training Time : 43.2036838531	
+Evaluation Time : 0.735579013824	
+Baseline Error: 7.72%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : hinge 
+Training Time : 43.6224029064	
+Evaluation Time : 0.742391109467	
+Baseline Error: 8.45%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : categorical_hinge 
+Training Time : 43.8919348717	
+Evaluation Time : 0.725205898285	
+Baseline Error: 7.76%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : logcosh 
+Training Time : 43.6932270527	
+Evaluation Time : 0.727223157883	
+Baseline Error: 7.79%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : categorical_crossentropy 
+Training Time : 44.0126168728	
+Evaluation Time : 0.741374969482	
+Baseline Error: 7.65%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : binary_crossentropy 
+Training Time : 44.050714016	
+Evaluation Time : 0.749803066254	
+Baseline Error: 1.46%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : kullback_leibler_divergence 
+Training Time : 43.4652841091	
+Evaluation Time : 0.739233970642	
+Baseline Error: 7.84%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : poisson 
+Training Time : 43.128562212	
+Evaluation Time : 0.738197088242	
+Baseline Error: 8.02%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : mean_squared_error 
+Training Time : 43.8407568932	
+Evaluation Time : 0.75332403183	
+Baseline Error: 7.86%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : mean_absolute_error 
+Training Time : 43.6951329708	
+Evaluation Time : 0.74104309082	
+Baseline Error: 8.04%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : mean_absolute_percentage_error 
+Training Time : 43.1019921303	
+Evaluation Time : 0.718045949936	
+Baseline Error: 7.90%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : mean_squared_logarithmic_error 
+Training Time : 43.4887049198	
+Evaluation Time : 0.708961963654	
+Baseline Error: 7.85%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : squared_hinge 
+Training Time : 43.3531019688	
+Evaluation Time : 0.730358839035	
+Baseline Error: 7.72%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : hinge 
+Training Time : 43.4496469498	
+Evaluation Time : 0.722177028656	
+Baseline Error: 8.44%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : categorical_hinge 
+Training Time : 43.8357892036	
+Evaluation Time : 0.722563028336	
+Baseline Error: 7.73%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : logcosh 
+Training Time : 43.8333060741	
+Evaluation Time : 0.732110023499	
+Baseline Error: 7.79%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : categorical_crossentropy 
+Training Time : 44.2283630371	
+Evaluation Time : 0.741358995438	
+Baseline Error: 7.65%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : binary_crossentropy 
+Training Time : 44.4983959198	
+Evaluation Time : 0.745187997818	
+Baseline Error: 1.46%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : kullback_leibler_divergence 
+Training Time : 43.7331080437	
+Evaluation Time : 0.712223052979	
+Baseline Error: 7.84%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : poisson 
+Training Time : 43.6392300129	
+Evaluation Time : 0.762403011322	
+Baseline Error: 8.02%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : mean_squared_error 
+Training Time : 43.6740939617	
+Evaluation Time : 0.735306978226	
+Baseline Error: 7.86%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : mean_absolute_error 
+Training Time : 43.5444941521	
+Evaluation Time : 0.734071016312	
+Baseline Error: 8.04%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : mean_absolute_percentage_error 
+Training Time : 43.2743501663	
+Evaluation Time : 0.719027996063	
+Baseline Error: 7.90%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : mean_squared_logarithmic_error 
+Training Time : 43.6851570606	
+Evaluation Time : 0.722733974457	
+Baseline Error: 7.85%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : squared_hinge 
+Training Time : 43.3748581409	
+Evaluation Time : 0.739817142487	
+Baseline Error: 7.72%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : hinge 
+Training Time : 43.6967720985	
+Evaluation Time : 0.738637924194	
+Baseline Error: 8.44%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : categorical_hinge 
+Training Time : 43.7268061638	
+Evaluation Time : 0.729630947113	
+Baseline Error: 7.75%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : logcosh 
+Training Time : 43.7020750046	
+Evaluation Time : 0.746145963669	
+Baseline Error: 7.79%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : categorical_crossentropy 
+Training Time : 44.0982100964	
+Evaluation Time : 0.747867107391	
+Baseline Error: 7.66%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : binary_crossentropy 
+Training Time : 44.1678190231	
+Evaluation Time : 0.746437072754	
+Baseline Error: 1.46%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : kullback_leibler_divergence 
+Training Time : 43.9042379856	
+Evaluation Time : 0.732162952423	
+Baseline Error: 7.84%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : tanh 
+L2 : softmax 
+Loss : poisson 
+Training Time : 43.6644899845	
+Evaluation Time : 0.745369911194	
+Baseline Error: 8.02%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : relu 
+L2 : softmax 
+Loss : mean_squared_error 
+Training Time : 43.9488830566	
+Evaluation Time : 0.74749994278	
+Baseline Error: 7.63%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : relu 
+L2 : softmax 
+Loss : mean_absolute_error 
+Training Time : 44.0446009636	
+Evaluation Time : 0.733363866806	
+Baseline Error: 8.97%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : relu 
+L2 : softmax 
+Loss : mean_absolute_percentage_error 
+Training Time : 43.4587168694	
+Evaluation Time : 0.712436914444	
+Baseline Error: 8.60%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : relu 
+L2 : softmax 
+Loss : mean_squared_logarithmic_error 
+Training Time : 43.6890370846	
+Evaluation Time : 0.72459602356	
+Baseline Error: 7.76%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : relu 
+L2 : softmax 
+Loss : squared_hinge 
+Training Time : 43.5757470131	
+Evaluation Time : 0.738744020462	
+Baseline Error: 7.81%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : relu 
+L2 : softmax 
+Loss : hinge 
+Training Time : 43.570330143	
+Evaluation Time : 0.72052693367	
+Baseline Error: 10.04%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : relu 
+L2 : softmax 
+Loss : categorical_hinge 
+Training Time : 43.9465517998	
+Evaluation Time : 0.721104860306	
+Baseline Error: 8.20%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : relu 
+L2 : softmax 
+Loss : logcosh 
+Training Time : 43.6580810547	
+Evaluation Time : 0.72830080986	
+Baseline Error: 7.78%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : relu 
+L2 : softmax 
+Loss : categorical_crossentropy 
+Training Time : 43.9864499569	
+Evaluation Time : 0.730495929718	
+Baseline Error: 7.36%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : relu 
+L2 : softmax 
+Loss : binary_crossentropy 
+Training Time : 43.7247030735	
+Evaluation Time : 0.728042125702	
+Baseline Error: 1.39%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : relu 
+L2 : softmax 
+Loss : kullback_leibler_divergence 
+Training Time : 43.6213068962	
+Evaluation Time : 0.718632936478	
+Baseline Error: 7.41%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : relu 
+L2 : softmax 
+Loss : poisson 
+Training Time : 43.5628461838	
+Evaluation Time : 0.725919008255	
+Baseline Error: 7.49%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : selu 
+L2 : softmax 
+Loss : mean_squared_error 
+Training Time : 46.9974169731	
+Evaluation Time : 0.807687997818	
+Baseline Error: 7.48%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : selu 
+L2 : softmax 
+Loss : mean_absolute_error 
+Training Time : 46.7705869675	
+Evaluation Time : 0.800585031509	
+Baseline Error: 7.83%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : selu 
+L2 : softmax 
+Loss : mean_absolute_percentage_error 
+Training Time : 46.5508449078	
+Evaluation Time : 0.810769796371	
+Baseline Error: 7.90%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : selu 
+L2 : softmax 
+Loss : mean_squared_logarithmic_error 
+Training Time : 46.8303089142	
+Evaluation Time : 0.804349899292	
+Baseline Error: 7.27%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : selu 
+L2 : softmax 
+Loss : squared_hinge 
+Training Time : 47.0078620911	
+Evaluation Time : 0.805858135223	
+Baseline Error: 7.75%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : selu 
+L2 : softmax 
+Loss : hinge 
+Training Time : 46.9709308147	
+Evaluation Time : 0.818880081177	
+Baseline Error: 7.90%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : selu 
+L2 : softmax 
+Loss : categorical_hinge 
+Training Time : 46.8882160187	
+Evaluation Time : 0.79306101799	
+Baseline Error: 7.56%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : selu 
+L2 : softmax 
+Loss : logcosh 
+Training Time : 46.9639468193	
+Evaluation Time : 0.810207843781	
+Baseline Error: 7.39%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : selu 
+L2 : softmax 
+Loss : categorical_crossentropy 
+Training Time : 47.1834340096	
+Evaluation Time : 0.797603845596	
+Baseline Error: 7.42%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : selu 
+L2 : softmax 
+Loss : binary_crossentropy 
+Training Time : 47.0222990513	
+Evaluation Time : 0.823632001877	
+Baseline Error: 1.43%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : selu 
+L2 : softmax 
+Loss : kullback_leibler_divergence 
+Training Time : 46.5542340279	
+Evaluation Time : 0.810431003571	
+Baseline Error: 7.35%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : selu 
+L2 : softmax 
+Loss : poisson 
+Training Time : 46.3566548824	
+Evaluation Time : 0.80283498764	
+Baseline Error: 7.50%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : linear 
+L2 : softmax 
+Loss : mean_squared_error 
+Training Time : 42.56270504	
+Evaluation Time : 0.717061042786	
+Baseline Error: 7.36%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : linear 
+L2 : softmax 
+Loss : mean_absolute_error 
+Training Time : 42.6960411072	
+Evaluation Time : 0.725244045258	
+Baseline Error: 8.04%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : linear 
+L2 : softmax 
+Loss : mean_absolute_percentage_error 
+Training Time : 42.5712327957	
+Evaluation Time : 0.713629961014	
+Baseline Error: 7.92%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : linear 
+L2 : softmax 
+Loss : mean_squared_logarithmic_error 
+Training Time : 42.5918030739	
+Evaluation Time : 0.704426050186	
+Baseline Error: 7.50%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : linear 
+L2 : softmax 
+Loss : squared_hinge 
+Training Time : 42.9531009197	
+Evaluation Time : 0.721030950546	
+Baseline Error: 7.76%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : linear 
+L2 : softmax 
+Loss : hinge 
+Training Time : 42.7963628769	
+Evaluation Time : 0.714784860611	
+Baseline Error: 8.26%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : linear 
+L2 : softmax 
+Loss : categorical_hinge 
+Training Time : 43.2440719604	
+Evaluation Time : 0.704891204834	
+Baseline Error: 7.89%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : linear 
+L2 : softmax 
+Loss : logcosh 
+Training Time : 42.6911869049	
+Evaluation Time : 0.72328710556	
+Baseline Error: 7.92%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : linear 
+L2 : softmax 
+Loss : categorical_crossentropy 
+Training Time : 42.8379819393	
+Evaluation Time : 0.720935821533	
+Baseline Error: 8.17%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : linear 
+L2 : softmax 
+Loss : binary_crossentropy 
+Training Time : 42.9310700893	
+Evaluation Time : 0.727301836014	
+Baseline Error: 1.46%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : linear 
+L2 : softmax 
+Loss : kullback_leibler_divergence 
+Training Time : 43.18582201	
+Evaluation Time : 0.706027030945	
+Baseline Error: 7.86%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : linear 
+L2 : softmax 
+Loss : poisson 
+Training Time : 42.8551259041	
+Evaluation Time : 0.731416940689	
+Baseline Error: 7.97%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : elu 
+L2 : softmax 
+Loss : mean_squared_error 
+Training Time : 43.2840089798	
+Evaluation Time : 0.738184928894	
+Baseline Error: 7.49%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : elu 
+L2 : softmax 
+Loss : mean_absolute_error 
+Training Time : 43.4189510345	
+Evaluation Time : 0.739336013794	
+Baseline Error: 8.13%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : elu 
+L2 : softmax 
+Loss : mean_absolute_percentage_error 
+Training Time : 43.224864006	
+Evaluation Time : 0.715546131134	
+Baseline Error: 7.81%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : elu 
+L2 : softmax 
+Loss : mean_squared_logarithmic_error 
+Training Time : 43.4786810875	
+Evaluation Time : 0.711165904999	
+Baseline Error: 7.46%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : elu 
+L2 : softmax 
+Loss : squared_hinge 
+Training Time : 43.3445820808	
+Evaluation Time : 0.706602096558	
+Baseline Error: 7.74%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : elu 
+L2 : softmax 
+Loss : hinge 
+Training Time : 43.2173659801	
+Evaluation Time : 0.71054816246	
+Baseline Error: 7.94%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : elu 
+L2 : softmax 
+Loss : categorical_hinge 
+Training Time : 43.9979438782	
+Evaluation Time : 0.728951931	
+Baseline Error: 7.95%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : elu 
+L2 : softmax 
+Loss : logcosh 
+Training Time : 43.6428768635	
+Evaluation Time : 0.712343931198	
+Baseline Error: 7.69%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : elu 
+L2 : softmax 
+Loss : categorical_crossentropy 
+Training Time : 43.7942609787	
+Evaluation Time : 0.729362010956	
+Baseline Error: 7.90%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : elu 
+L2 : softmax 
+Loss : binary_crossentropy 
+Training Time : 44.4103329182	
+Evaluation Time : 0.728665113449	
+Baseline Error: 1.50%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : elu 
+L2 : softmax 
+Loss : kullback_leibler_divergence 
+Training Time : 43.6471850872	
+Evaluation Time : 0.704650163651	
+Baseline Error: 7.78%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : elu 
+L2 : softmax 
+Loss : poisson 
+Training Time : 43.5874929428	
+Evaluation Time : 0.727558135986	
+Baseline Error: 7.87%	
