@@ -193,7 +193,8 @@ def run_evaluation(model, X_train, y_train, X_test, y_test,params,b_size,n_epoch
 	start = time.time()
 
 	file_c.write(str(n_epochs)+"\t")
-	if model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=n_epochs, batch_size=200, verbose=2):
+	file_c.write(str(b_size)+"\t")
+	if model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=n_epochs, batch_size=b_size, verbose=2):
 		print ("all ok")
 
 	else :
@@ -344,6 +345,26 @@ def test4_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 			else:
 				print ("NOT ALL OK =(")
 			backend.clear_session()
+
+def test5_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes):
+
+	#Best Activations for test1_NN
+	activations_1 = ['relu','selu','tanh','linear','elu']
+	params.activation_2 = 'softmax'
+	params.optimizator='nadam'
+
+	loss_function = 'binary_crossentropy'
+
+	for i in range (len(activations_1)):
+		params.activation_1=activations_1[i]	
+		for j in range(25,500,25):				
+			params.loss=loss_function
+			model = simple_NN(params)
+			if run_evaluation(model, X_train, y_train, X_test, y_test,params,j,5):
+				print ("all okey!")
+			else:
+				print ("NOT ALL OK =(")
+			backend.clear_session()
 	
 
 
@@ -367,6 +388,8 @@ if __name__ == '__main__':
 
 
 	test4_NN(params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
+
+	test5_NN(params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 
 
 	"""
