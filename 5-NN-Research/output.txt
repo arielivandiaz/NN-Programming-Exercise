@@ -177,3 +177,14 @@ L3 : elu
 Training Time : 1095.33194995	
 Evaluation Time : 11.0452411175	
 Baseline Error: 88.63%	
+###############################################################
+Test: large_CNN 
+Optimization: adam 
+L1 : relu 
+L2 : relu 
+L3 : relu 
+L4 : relu 
+L5 : softmax 
+Training Time : 1183.77394199	
+Evaluation Time : 11.3796169758	
+Baseline Error: 2.66%	
