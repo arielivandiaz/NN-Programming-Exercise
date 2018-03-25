@@ -8,3 +8,4 @@ Test: simple_NN 	Optimization: nadam 	L1 : relu 	L2 : softmax 	loss : mean_squar
 44.2564108372	0.734172105789	8.21%	Test: simple_NN 	Optimization: nadam 	L1 : relu 	L2 : softmax 	loss : logcosh 	
 43.9472579956	0.73774600029	7.76%	Test: simple_NN 	Optimization: nadam 	L1 : relu 	L2 : softmax 	loss : categorical_crossentropy 	
 44.558724165	0.716862201691	7.22%	Test: simple_NN 	Optimization: nadam 	L1 : relu 	L2 : softmax 	loss : sparse_categorical_crossentropy 	
+####

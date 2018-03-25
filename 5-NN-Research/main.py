@@ -194,8 +194,11 @@ def run_evaluation(model, X_train, y_train, X_test, y_test,params):
 
 	if model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=5, batch_size=200, verbose=2):
 		print ("all ok")
+
 	else :
 		print ("ERROR")
+		file.write ("\t\n")
+		return 0
 
 	end = time.time()
 
@@ -300,7 +303,7 @@ def test2_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 def test3_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes):
 
 	#Best Activations for test1_NN
-	activations_1 = ['relu','selu','tanh','linear','elu']
+	activations_1 = ['selu','relu','tanh','linear','elu']
 	params.activation_2 = 'softmax'
 	params.optimizator='nadam'
 
@@ -316,6 +319,8 @@ def test3_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 			else:
 				print ("NOT ALL OK =(")
 			backend.clear_session()
+		backend.clear_session()
+	backend.clear_session()		
 
 
 
