@@ -192,7 +192,7 @@ def run_evaluation(model, X_train, y_train, X_test, y_test,params,b_size,n_epoch
 
 	start = time.time()
 
-	file_c.write(n_epochs+"\t")
+	file_c.write(str(n_epochs)+"\t")
 	if model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=n_epochs, batch_size=200, verbose=2):
 		print ("all ok")
 

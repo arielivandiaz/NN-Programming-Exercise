@@ -859,3 +859,34 @@ Loss : binary_crossentropy
 Training Time : 44.5194180012	
 Evaluation Time : 0.735759019852	
 Baseline Error: 1.54%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : relu 
+L2 : softmax 
+Loss : binary_crossentropy 
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : relu 
+L2 : softmax 
+Loss : binary_crossentropy 
+Training Time : 9.26813077927	
+Evaluation Time : 0.737444162369	
+Baseline Error: 2.36%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : relu 
+L2 : softmax 
+Loss : binary_crossentropy 
+Training Time : 18.0769441128	
+Evaluation Time : 0.742027997971	
+Baseline Error: 1.79%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : relu 
+L2 : softmax 
+Loss : binary_crossentropy 
+Training Time : 26.7032430172	
