@@ -311,7 +311,10 @@ def test3_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 		for j in loss_function:				
 			params.loss=j
 			model = simple_NN(params)
-			run_evaluation(model, X_train, y_train, X_test, y_test,params)
+			if run_evaluation(model, X_train, y_train, X_test, y_test,params):
+				print ("all okey!")
+			else:
+				print ("NOT ALL OK =(")
 			backend.clear_session()
 
 

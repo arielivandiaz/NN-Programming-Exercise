@@ -1,0 +1,10 @@
+Test: simple_NN 	Optimization: nadam 	L1 : relu 	L2 : softmax 	loss : mean_squared_error 	
+43.9322350025	0.737866163254	7.52%	Test: simple_NN 	Optimization: nadam 	L1 : relu 	L2 : softmax 	loss : mean_absolute_error 	
+43.9338259697	0.751413822174	17.14%	Test: simple_NN 	Optimization: nadam 	L1 : relu 	L2 : softmax 	loss : mean_absolute_percentage_error 	
+43.7244529724	0.733373165131	8.23%	Test: simple_NN 	Optimization: nadam 	L1 : relu 	L2 : softmax 	loss : mean_squared_logarithmic_error 	
+43.9213089943	0.695724010468	7.72%	Test: simple_NN 	Optimization: nadam 	L1 : relu 	L2 : softmax 	loss : squared_hinge 	
+43.3219771385	0.720273017883	7.88%	Test: simple_NN 	Optimization: nadam 	L1 : relu 	L2 : softmax 	loss : hinge 	
+43.8744688034	0.712017059326	9.94%	Test: simple_NN 	Optimization: nadam 	L1 : relu 	L2 : softmax 	loss : categorical_hinge 	
+44.2564108372	0.734172105789	8.21%	Test: simple_NN 	Optimization: nadam 	L1 : relu 	L2 : softmax 	loss : logcosh 	
+43.9472579956	0.73774600029	7.76%	Test: simple_NN 	Optimization: nadam 	L1 : relu 	L2 : softmax 	loss : categorical_crossentropy 	
+44.558724165	0.716862201691	7.22%	Test: simple_NN 	Optimization: nadam 	L1 : relu 	L2 : softmax 	loss : sparse_categorical_crossentropy 	
