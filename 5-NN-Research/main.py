@@ -303,11 +303,11 @@ def test2_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 def test3_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes):
 
 	#Best Activations for test1_NN
-	activations_1 = ['selu','relu','tanh','linear','elu']
+	activations_1 = ['tanh','relu','selu','linear','elu']
 	params.activation_2 = 'softmax'
 	params.optimizator='nadam'
 
-	loss_function = ['mean_squared_error','mean_absolute_error','mean_absolute_percentage_error','mean_squared_logarithmic_error','squared_hinge','hinge','categorical_hinge','logcosh','categorical_crossentropy','sparse_categorical_crossentropy','binary_crossentropy','kullback_leibler_divergence','poisson','cosine_proximity']
+	loss_function = ['mean_squared_error','mean_absolute_error','mean_absolute_percentage_error','mean_squared_logarithmic_error','squared_hinge','hinge','categorical_hinge','logcosh','categorical_crossentropy','sparse_categorical_crossentropy','kullback_leibler_divergence','poisson','cosine_proximity']
 
 	for i in range (len(activations_1)):
 		params.activation_1=activations_1[i]	
