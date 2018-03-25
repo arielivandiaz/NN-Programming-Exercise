@@ -185,14 +185,17 @@ def run_evaluation(model, X_train, y_train, X_test, y_test,params):
 
 
 	file = open('output.txt', 'a')
-	file_c = open('csv.txt', 'a')
+	file_c = open('output_csv.txt', 'a')
 
 	write_label(file,params)
 	write_label_csv(file_c,params)
 
 	start = time.time()
 
-	model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=5, batch_size=200, verbose=2)
+	if model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=5, batch_size=200, verbose=2):
+		print ("all ok")
+	else :
+		print ("ERROR")
 
 	end = time.time()
 
@@ -240,6 +243,8 @@ def write_label(file,params):
 		file.write("L4 : " + params.activation_4 +" \n")
 		file.write("L5 : " + params.activation_5 +" \n")
 
+	file.write("Loss : " + params.loss + " \n")
+
 #/********************************************************************************************* 
 def write_label_csv(file,params):
 
@@ -249,6 +254,7 @@ def write_label_csv(file,params):
 
 	file.write("L1 : " + params.activation_1 + " \t")
 	file.write("L2 : " + params.activation_2 + " \t")
+	file.write("loss : " + params.loss + " \t")
 
 	if (params.neural_network=='simple_CNN'):
 		file.write("L3 : " + params.activation_3 +" \t")
