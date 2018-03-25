@@ -1,0 +1,896 @@
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : relu 
+L2 : relu 
+Training Time : 80.9951810837	
+Evaluation Time : 0.732614994049	
+Baseline Error: 90.20%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : relu 
+L2 : softmax 
+Training Time : 81.0389380455	
+Evaluation Time : 0.717406988144	
+Baseline Error: 7.12%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : relu 
+L2 : tanh 
+Training Time : 80.8325548172	
+Evaluation Time : 0.742599964142	
+Baseline Error: 71.69%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : relu 
+L2 : sigmoid 
+Training Time : 80.8976180553	
+Evaluation Time : 0.719186067581	
+Baseline Error: 8.17%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : relu 
+L2 : relu 
+Training Time : 81.4161698818	
+Evaluation Time : 0.730621099472	
+Baseline Error: 90.20%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : relu 
+L2 : softmax 
+Training Time : 80.6257750988	
+Evaluation Time : 0.728492021561	
+Baseline Error: 7.13%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : relu 
+L2 : tanh 
+Training Time : 80.4360439777	
+Evaluation Time : 0.711716890335	
+Baseline Error: 71.47%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : relu 
+L2 : sigmoid 
+Training Time : 80.5444600582	
+Evaluation Time : 0.710878133774	
+Baseline Error: 8.17%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : relu 
+L2 : hard_sigmoid 
+Training Time : 80.3386199474	
+Evaluation Time : 0.717813014984	
+Baseline Error: 49.20%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : relu 
+L2 : linear 
+Training Time : 80.4341249466	
+Evaluation Time : 0.713738203049	
+Baseline Error: 91.02%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : relu 
+L2 : selu 
+Training Time : 80.6829588413	
+Evaluation Time : 0.728203058243	
+Baseline Error: 90.20%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : relu 
+L2 : softplus 
+Training Time : 80.5024449825	
+Evaluation Time : 0.726511955261	
+Baseline Error: 7.96%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : relu 
+L2 : relu 
+Training Time : 40.6888139248	
+Evaluation Time : 0.735649108887	
+Baseline Error: 90.20%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : relu 
+L2 : softmax 
+Training Time : 40.8381822109	
+Evaluation Time : 0.751296043396	
+Baseline Error: 8.79%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : relu 
+L2 : tanh 
+Training Time : 40.3474230766	
+Evaluation Time : 0.742041110992	
+Baseline Error: 91.08%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : relu 
+L2 : sigmoid 
+Training Time : 40.7723789215	
+Evaluation Time : 0.720567941666	
+Baseline Error: 9.32%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : relu 
+L2 : hard_sigmoid 
+Training Time : 40.873775959	
+Evaluation Time : 0.74022603035	
+Baseline Error: 12.31%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : relu 
+L2 : linear 
+Training Time : 40.7569561005	
+Evaluation Time : 0.730542182922	
+Baseline Error: 88.90%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : relu 
+L2 : selu 
+Training Time : 41.0112540722	
+Evaluation Time : 0.730618953705	
+Baseline Error: 87.95%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : relu 
+L2 : softplus 
+Training Time : 40.9933669567	
+Evaluation Time : 0.73641705513	
+Baseline Error: 9.28%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : relu 
+L2 : softsign 
+Training Time : 40.8547990322	
+Evaluation Time : 0.723903179169	
+Baseline Error: 89.91%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : relu 
+L2 : elu 
+Training Time : 40.5821590424	
+Evaluation Time : 0.724404811859	
+Baseline Error: 89.72%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softmax 
+L2 : relu 
+Training Time : 44.0345830917	
+Evaluation Time : 0.874432086945	
+Baseline Error: 90.20%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softmax 
+L2 : softmax 
+Training Time : 44.3365991116	
+Evaluation Time : 0.88666510582	
+Baseline Error: 88.65%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softmax 
+L2 : tanh 
+Training Time : 44.0777640343	
+Evaluation Time : 0.882770061493	
+Baseline Error: 89.72%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softmax 
+L2 : sigmoid 
+Training Time : 43.8538589478	
+Evaluation Time : 0.880056142807	
+Baseline Error: 88.65%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softmax 
+L2 : hard_sigmoid 
+Training Time : 44.3364779949	
+Evaluation Time : 0.890552997589	
+Baseline Error: 88.65%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softmax 
+L2 : linear 
+Training Time : 44.2518510818	
+Evaluation Time : 0.87667798996	
+Baseline Error: 80.70%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softmax 
+L2 : selu 
+Training Time : 44.1700558662	
+Evaluation Time : 0.888288021088	
+Baseline Error: 88.65%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softmax 
+L2 : softplus 
+Training Time : 44.2076818943	
+Evaluation Time : 0.89547586441	
+Baseline Error: 88.65%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softmax 
+L2 : softsign 
+Training Time : 43.7154979706	
+Evaluation Time : 0.885514974594	
+Baseline Error: 88.65%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softmax 
+L2 : elu 
+Training Time : 43.9352059364	
+Evaluation Time : 0.87459397316	
+Baseline Error: 89.91%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : tanh 
+L2 : relu 
+Training Time : 40.5447621346	
+Evaluation Time : 0.722245931625	
+Baseline Error: 90.20%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : tanh 
+L2 : softmax 
+Training Time : 40.5325958729	
+Evaluation Time : 0.727169036865	
+Baseline Error: 8.40%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : tanh 
+L2 : tanh 
+Training Time : 39.9065001011	
+Evaluation Time : 0.726280927658	
+Baseline Error: 88.34%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : tanh 
+L2 : sigmoid 
+Training Time : 39.9167859554	
+Evaluation Time : 0.734091043472	
+Baseline Error: 8.91%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : tanh 
+L2 : hard_sigmoid 
+Training Time : 40.529047966	
+Evaluation Time : 0.731539011002	
+Baseline Error: 23.69%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : tanh 
+L2 : linear 
+Training Time : 40.3424391747	
+Evaluation Time : 0.735091924667	
+Baseline Error: 90.42%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : tanh 
+L2 : selu 
+Training Time : 40.6904270649	
+Evaluation Time : 0.742460012436	
+Baseline Error: 89.68%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : tanh 
+L2 : softplus 
+Training Time : 40.1261870861	
+Evaluation Time : 0.718135118484	
+Baseline Error: 8.55%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : tanh 
+L2 : softsign 
+Training Time : 40.3157989979	
+Evaluation Time : 0.718134880066	
+Baseline Error: 80.34%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : tanh 
+L2 : elu 
+Training Time : 40.2938530445	
+Evaluation Time : 0.733704090118	
+Baseline Error: 85.82%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : sigmoid 
+L2 : relu 
+Training Time : 40.4716629982	
+Evaluation Time : 0.735778093338	
+Baseline Error: 66.02%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : sigmoid 
+L2 : softmax 
+Training Time : 40.6862180233	
+Evaluation Time : 0.744956970215	
+Baseline Error: 22.04%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : sigmoid 
+L2 : tanh 
+Training Time : 40.5248119831	
+Evaluation Time : 0.741208076477	
+Baseline Error: 91.08%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : sigmoid 
+L2 : sigmoid 
+Training Time : 41.0108120441	
+Evaluation Time : 0.73809504509	
+Baseline Error: 18.88%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : sigmoid 
+L2 : hard_sigmoid 
+Training Time : 41.0243120193	
+Evaluation Time : 0.750311136246	
+Baseline Error: 81.21%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : sigmoid 
+L2 : linear 
+Training Time : 40.647908926	
+Evaluation Time : 0.734970092773	
+Baseline Error: 89.68%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : sigmoid 
+L2 : selu 
+Training Time : 40.6915071011	
+Evaluation Time : 0.753067016602	
+Baseline Error: 88.65%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : sigmoid 
+L2 : softplus 
+Training Time : 40.635406971	
+Evaluation Time : 0.742511987686	
+Baseline Error: 21.93%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : sigmoid 
+L2 : softsign 
+Training Time : 40.6347250938	
+Evaluation Time : 0.739035129547	
+Baseline Error: 90.42%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : sigmoid 
+L2 : elu 
+Training Time : 40.6826369762	
+Evaluation Time : 0.729342937469	
+Baseline Error: 89.72%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : hard_sigmoid 
+L2 : relu 
+Training Time : 42.6782178879	
+Evaluation Time : 0.75039100647	
+Baseline Error: 89.68%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : hard_sigmoid 
+L2 : softmax 
+Training Time : 42.9282579422	
+Evaluation Time : 0.747257947922	
+Baseline Error: 23.56%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : hard_sigmoid 
+L2 : tanh 
+Training Time : 43.0365700722	
+Evaluation Time : 0.750114917755	
+Baseline Error: 90.20%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : hard_sigmoid 
+L2 : sigmoid 
+Training Time : 42.9114208221	
+Evaluation Time : 0.753261804581	
+Baseline Error: 24.43%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : hard_sigmoid 
+L2 : hard_sigmoid 
+Training Time : 43.2297899723	
+Evaluation Time : 0.745293855667	
+Baseline Error: 84.88%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : hard_sigmoid 
+L2 : linear 
+Training Time : 43.64854002	
+Evaluation Time : 0.75594997406	
+Baseline Error: 89.90%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : hard_sigmoid 
+L2 : selu 
+Training Time : 43.2867820263	
+Evaluation Time : 0.739549875259	
+Baseline Error: 90.18%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : hard_sigmoid 
+L2 : softplus 
+Training Time : 43.3348138332	
+Evaluation Time : 0.747112035751	
+Baseline Error: 21.47%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : hard_sigmoid 
+L2 : softsign 
+Training Time : 43.0258150101	
+Evaluation Time : 0.756120920181	
+Baseline Error: 88.65%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : hard_sigmoid 
+L2 : elu 
+Training Time : 42.9877769947	
+Evaluation Time : 0.74680185318	
+Baseline Error: 89.68%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : linear 
+L2 : relu 
+Training Time : 40.0458710194	
+Evaluation Time : 0.723806142807	
+Baseline Error: 90.20%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : linear 
+L2 : softmax 
+Training Time : 40.1884860992	
+Evaluation Time : 0.725169181824	
+Baseline Error: 8.46%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : linear 
+L2 : tanh 
+Training Time : 40.2156832218	
+Evaluation Time : 0.722019910812	
+Baseline Error: 90.26%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : linear 
+L2 : sigmoid 
+Training Time : 39.8905518055	
+Evaluation Time : 0.709802150726	
+Baseline Error: 8.91%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : linear 
+L2 : hard_sigmoid 
+Training Time : 40.0366971493	
+Evaluation Time : 0.711547851562	
+Baseline Error: 16.38%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : linear 
+L2 : linear 
+Training Time : 39.8946869373	
+Evaluation Time : 0.717115163803	
+Baseline Error: 97.21%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : linear 
+L2 : selu 
+Training Time : 39.998347044	
+Evaluation Time : 0.713911056519	
+Baseline Error: 89.72%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : linear 
+L2 : softplus 
+Training Time : 39.9932179451	
+Evaluation Time : 0.699603796005	
+Baseline Error: 8.64%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : linear 
+L2 : softsign 
+Training Time : 39.9634130001	
+Evaluation Time : 0.706639051437	
+Baseline Error: 89.72%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : linear 
+L2 : elu 
+Training Time : 40.2777180672	
+Evaluation Time : 0.712239980698	
+Baseline Error: 89.90%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : selu 
+L2 : relu 
+Training Time : 44.3694660664	
+Evaluation Time : 0.798301935196	
+Baseline Error: 90.20%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : selu 
+L2 : softmax 
+Training Time : 44.2094349861	
+Evaluation Time : 0.802664995193	
+Baseline Error: 8.10%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : selu 
+L2 : tanh 
+Training Time : 43.9307780266	
+Evaluation Time : 0.808871030807	
+Baseline Error: 90.18%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : selu 
+L2 : sigmoid 
+Training Time : 44.2390940189	
+Evaluation Time : 0.815696001053	
+Baseline Error: 8.24%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : selu 
+L2 : hard_sigmoid 
+Training Time : 44.2954411507	
+Evaluation Time : 0.810038805008	
+Baseline Error: 40.14%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : selu 
+L2 : linear 
+Training Time : 44.203938961	
+Evaluation Time : 0.816495895386	
+Baseline Error: 88.02%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : selu 
+L2 : selu 
+Training Time : 44.2937870026	
+Evaluation Time : 0.810116052628	
+Baseline Error: 89.68%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : selu 
+L2 : softplus 
+Training Time : 43.9292030334	
+Evaluation Time : 0.80629992485	
+Baseline Error: 8.51%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : selu 
+L2 : softsign 
+Training Time : 44.2830810547	
+Evaluation Time : 0.812263011932	
+Baseline Error: 77.80%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : selu 
+L2 : elu 
+Training Time : 44.0984590054	
+Evaluation Time : 0.814049005508	
+Baseline Error: 89.68%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softplus 
+L2 : relu 
+Training Time : 41.7576930523	
+Evaluation Time : 0.757103919983	
+Baseline Error: 90.20%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softplus 
+L2 : softmax 
+Training Time : 41.8658649921	
+Evaluation Time : 0.733965158463	
+Baseline Error: 14.50%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softplus 
+L2 : tanh 
+Training Time : 41.4953320026	
+Evaluation Time : 0.7418820858	
+Baseline Error: 89.72%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softplus 
+L2 : sigmoid 
+Training Time : 41.6907641888	
+Evaluation Time : 0.727658033371	
+Baseline Error: 14.25%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softplus 
+L2 : hard_sigmoid 
+Training Time : 41.9282999039	
+Evaluation Time : 0.740437984467	
+Baseline Error: 84.87%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softplus 
+L2 : linear 
+Training Time : 41.8678441048	
+Evaluation Time : 0.740235090256	
+Baseline Error: 89.68%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softplus 
+L2 : selu 
+Training Time : 41.8167710304	
+Evaluation Time : 0.739145040512	
+Baseline Error: 90.42%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softplus 
+L2 : softplus 
+Training Time : 41.9809730053	
+Evaluation Time : 0.743342876434	
+Baseline Error: 14.66%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softplus 
+L2 : softsign 
+Training Time : 41.6117010117	
+Evaluation Time : 0.744410037994	
+Baseline Error: 90.20%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softplus 
+L2 : elu 
+Training Time : 41.6232800484	
+Evaluation Time : 0.750759124756	
+Baseline Error: 89.68%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softsign 
+L2 : relu 
+Training Time : 40.6293752193	
+Evaluation Time : 0.713628053665	
+Baseline Error: 90.20%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softsign 
+L2 : softmax 
+Training Time : 40.7680540085	
+Evaluation Time : 0.720379114151	
+Baseline Error: 8.45%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softsign 
+L2 : tanh 
+Training Time : 40.6679141521	
+Evaluation Time : 0.733443021774	
+Baseline Error: 88.65%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softsign 
+L2 : sigmoid 
+Training Time : 40.359265089	
+Evaluation Time : 0.722422838211	
+Baseline Error: 8.57%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softsign 
+L2 : hard_sigmoid 
+Training Time : 40.3828659058	
+Evaluation Time : 0.73171210289	
+Baseline Error: 16.45%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softsign 
+L2 : linear 
+Training Time : 40.3558900356	
+Evaluation Time : 0.720636844635	
+Baseline Error: 89.77%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softsign 
+L2 : selu 
+Training Time : 40.4608538151	
+Evaluation Time : 0.731838941574	
+Baseline Error: 90.20%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softsign 
+L2 : softplus 
+Training Time : 40.6134018898	
+Evaluation Time : 0.744597911835	
+Baseline Error: 8.54%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softsign 
+L2 : softsign 
+Training Time : 40.9671928883	
+Evaluation Time : 0.744493961334	
+Baseline Error: 86.33%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : softsign 
+L2 : elu 
+Training Time : 40.6713449955	
+Evaluation Time : 0.73019194603	
+Baseline Error: 88.65%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : elu 
+L2 : relu 
+Training Time : 41.0494790077	
+Evaluation Time : 0.728464126587	
+Baseline Error: 90.20%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : elu 
+L2 : softmax 
+Training Time : 41.2183868885	
+Evaluation Time : 0.731537103653	
+Baseline Error: 8.51%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : elu 
+L2 : tanh 
+Training Time : 41.1911418438	
+Evaluation Time : 0.726007938385	
+Baseline Error: 94.43%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : elu 
+L2 : sigmoid 
+Training Time : 41.1677799225	
+Evaluation Time : 0.733825922012	
+Baseline Error: 8.82%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : elu 
+L2 : hard_sigmoid 
+Training Time : 41.0572869778	
+Evaluation Time : 0.740537166595	
+Baseline Error: 40.74%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : elu 
+L2 : linear 
+Training Time : 40.7717328072	
+Evaluation Time : 0.727702856064	
+Baseline Error: 90.26%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : elu 
+L2 : selu 
+Training Time : 40.8542399406	
+Evaluation Time : 0.723536014557	
+Baseline Error: 83.77%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : elu 
+L2 : softplus 
+Training Time : 40.7726371288	
+Evaluation Time : 0.720287084579	
+Baseline Error: 8.77%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : elu 
+L2 : softsign 
+Training Time : 40.4397640228	
+Evaluation Time : 0.721297025681	
+Baseline Error: 90.42%	
+###############################################################
+Test: simple_NN 
+Optimization: adam 
+L1 : elu 
+L2 : elu 
+Training Time : 40.8824670315	
+Evaluation Time : 0.726406097412	
+Baseline Error: 72.63%	

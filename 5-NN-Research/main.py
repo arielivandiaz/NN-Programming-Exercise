@@ -190,7 +190,7 @@ def run_evaluation(model, X_train, y_train, X_test, y_test,params):
 
 	start = time.time()
 
-	model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=10, batch_size=200, verbose=2)
+	model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=5, batch_size=200, verbose=2)
 	end = time.time()
 	print ("Training Time : " , end - start)
 	file.write ("Training Time : " + str(end - start))
@@ -233,7 +233,7 @@ def write_label(file,params):
 
 def test_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes):
 
-	activations = ['relu','softmax','tahn','sigmoid','hard_sigoid','linear','selu','softplus','softsing','elu']
+	activations = ['relu','softmax','tanh','sigmoid','hard_sigmoid','linear','selu','softplus','softsign','elu']
 
 	for i in activations:
 		params.activation_1=i
