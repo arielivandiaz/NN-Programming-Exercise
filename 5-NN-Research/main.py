@@ -21,6 +21,7 @@ class model_params():
 
 	neural_network = 0
 	optimizator = 0
+	loss=0
 	activation_1 = 0
 	activation_2 = 0
 	activation_3 = 0
@@ -40,6 +41,13 @@ class model_params():
 			self.optimizator =  (args['Optimizator'])
 		else :
 			self.optimizator = 'adam'
+
+
+		if (args['Loss Function']):
+			self.loss =  (args['Loss Function'])
+		else :
+			self.loss = 'categorical_crossentropy'
+
 
 		if (args['Activation Function Layer 1']):
 			self.activation_1 =  (args['Activation Function Layer 1'])
@@ -80,6 +88,7 @@ def get_args():
 	
 	parser.add_argument('Neural Network Selector', default=0, nargs='?' )
 	parser.add_argument('Optimizator', default='adam', nargs='?',  )
+	parser.add_argument('Loss Function', default='categorical_crossentropy', nargs='?',  )	
 	parser.add_argument('Activation Function Layer 1', default='relu', nargs='?')
 	parser.add_argument('Activation Function Layer 2', default='relu', nargs='?')
 	parser.add_argument('Activation Function Layer 3', default='relu', nargs='?')
@@ -103,7 +112,7 @@ def simple_NN(params):
 	#Last Layer
 	model.add(Dense(num_classes, kernel_initializer='normal', activation=params.activation_2))
 	# Compile model
-	model.compile(loss='categorical_crossentropy', optimizer=params.optimizator, metrics=['accuracy'])
+	model.compile(loss=params.loss, optimizer=params.optimizator, metrics=['accuracy'])
 	return model
 
 def simple_CNN(params):
@@ -222,6 +231,17 @@ def write_label(file,params):
 
 
 
+def test_NN (params):
+
+	activations = ['relu','softmax','tahn','sigmoid','hard_sigoid','linear','selu','softplus','softsing','elu']
+
+	for i in activations:
+		params.activation_1=i
+			for j in activations:				
+				params.activation_2=j
+				model = simple_NN(params)
+				run_evaluation(model, X_train, y_train, X_test, y_test,params)
+				backend.clear_session()
 
 
 if __name__ == '__main__':
@@ -239,7 +259,9 @@ if __name__ == '__main__':
 	#Get model data from minst
 	X_train, y_train, X_test, y_test, num_pixels , num_classes= get_data(params.neural_network)
 
-	
+	test_NN(params)
+
+	"""
 	# Build the model
 	if(params.neural_network=='simple_NN'):
 		model = simple_NN(params)
@@ -255,4 +277,4 @@ if __name__ == '__main__':
 
 	# Clean up
 	backend.clear_session()
-
+	"""
