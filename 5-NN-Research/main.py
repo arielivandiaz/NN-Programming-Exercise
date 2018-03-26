@@ -22,6 +22,8 @@ class model_params():
 	neural_network = 0
 	optimizator = 0
 	loss=0
+	n_epochs=0
+	b_size=0
 	activation_1 = 0
 	activation_2 = 0
 	activation_3 = 0
@@ -49,14 +51,14 @@ class model_params():
 			self.loss = 'categorical_crossentropy'
 
 		if (args['N Epochs']):
-			self.loss =  (args['N Epochs'])
+			self.n_epochs =  (args['N Epochs'])
 		else :
-			self.loss = '5'
+			self.n_epochs = '5'
 
 		if (args['Batch Size']):
-			self.loss =  (args['Batch Size'])
+			self.b_size =  (args['Batch Size'])
 		else :
-			self.loss = '200'
+			self.b_size = '200'
 
 
 		if (args['Activation Function Layer 1']):
@@ -76,9 +78,9 @@ class model_params():
 			self.activation_3 =  (args['Activation Function Layer 3'])
 		else:
 			if (self.neural_network == 'Simple_CNN'):
-				self.activation_2= 'softmax'
+				self.activation_3= 'softmax'
 			else :
-				self.activation_2= 'relu'
+				self.activation_3= 'relu'
 
 		if (args['Activation Function Layer 4']):
 			self.activation_4 =  (args['Activation Function Layer 4'])
@@ -209,7 +211,7 @@ def run_evaluation(model, X_train, y_train, X_test, y_test,params,b_size,n_epoch
 
 	file_c.write(str(n_epochs)+"\t")
 	file_c.write(str(b_size)+"\t")
-	if model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=n_epochs, batch_size=b_size, verbose=2):
+	if model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=params.n_epochs, batch_size=params.b_size, verbose=2):
 		print ("all ok")
 
 	else :
@@ -400,8 +402,17 @@ if __name__ == '__main__':
 	X_train, y_train, X_test, y_test, num_pixels , num_classes = get_data(params.neural_network)
 
 
-	print (params)
+	print (params.neural_network)
 	print ("\n")
+	print (params.optimizator)
+	print ("\n")
+	print (params.loss)
+	print ("\n")
+	print (params.n_epochs)
+	print ("\n")
+	print (params.b_size)
+	print ("\n")
+	
 	#test4_NN(params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 
 	#test5_NN(params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
