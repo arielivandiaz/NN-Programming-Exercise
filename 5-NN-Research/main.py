@@ -198,7 +198,7 @@ def get_data (param):
 
 
 #/********************************************************************************************* 
-def run_evaluation(model, X_train, y_train, X_test, y_test,params,b_size,n_epochs):
+def run_evaluation(model, X_train, y_train, X_test, y_test,params):
 
 
 	file = open('output.txt', 'a')
@@ -298,7 +298,7 @@ def test1_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 		for j in activations:				
 			params.activation_2=j
 			model = simple_NN(params)
-			run_evaluation(model, X_train, y_train, X_test, y_test,params,200,5)
+			run_evaluation(model, X_train, y_train, X_test, y_test,params)
 			backend.clear_session()
 
 def test2_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes):
@@ -316,7 +316,7 @@ def test2_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 		for j in op_function:				
 			params.optimizator=j
 			model = simple_NN(params)
-			run_evaluation(model, X_train, y_train, X_test, y_test,params,200,5)
+			run_evaluation(model, X_train, y_train, X_test, y_test,params)
 			backend.clear_session()
 
 def test3_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes):
@@ -335,7 +335,7 @@ def test3_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 			print (j)
 			print ("\n")
 			model = simple_NN(params)
-			if run_evaluation(model, X_train, y_train, X_test, y_test,params,200,5):
+			if run_evaluation(model, X_train, y_train, X_test, y_test,params):
 				print ("all okey!")
 			else:
 				print ("NOT ALL OK =(")
@@ -357,7 +357,8 @@ def test4_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 		for j in range(1,20):				
 			params.loss=loss_function
 			model = simple_NN(params)
-			if run_evaluation(model, X_train, y_train, X_test, y_test,params,200,j):
+			params.n_epochs=j
+			if run_evaluation(model, X_train, y_train, X_test, y_test,params):
 				print ("all okey!")
 			else:
 				print ("NOT ALL OK =(")
@@ -377,7 +378,8 @@ def test5_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 		for j in range(25,500,25):				
 			params.loss=loss_function
 			model = simple_NN(params)
-			if run_evaluation(model, X_train, y_train, X_test, y_test,params,j,5):
+			params.b_size=j
+			if run_evaluation(model, X_train, y_train, X_test, y_test,params):
 				print ("all okey!")
 			else:
 				print ("NOT ALL OK =(")
@@ -412,7 +414,7 @@ if __name__ == '__main__':
 	print ("\n")
 	print (params.b_size)
 	print ("\n")
-	
+
 	#test4_NN(params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 
 	#test5_NN(params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
