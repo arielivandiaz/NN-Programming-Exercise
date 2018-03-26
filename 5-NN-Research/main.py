@@ -125,11 +125,15 @@ def simple_NN(params):
 	model = Sequential()
 	#input_function=
 	#First Layer
+	print("asdasd1")
 	model.add(Dense(num_pixels, input_dim=num_pixels, kernel_initializer='normal', activation=params.activation_1))
 	#Last Layer
+	print("asdasd2")
 	model.add(Dense(num_classes, kernel_initializer='normal', activation=params.activation_2))
 	# Compile model
+	print("asdasd3")
 	model.compile(loss=params.loss, optimizer=params.optimizator, metrics=['accuracy'])
+	print("asdasd4")
 	return model
 
 def simple_CNN(params):
