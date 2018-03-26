@@ -48,6 +48,16 @@ class model_params():
 		else :
 			self.loss = 'categorical_crossentropy'
 
+		if (args['N Epochs']):
+			self.loss =  (args['N Epochs'])
+		else :
+			self.loss = '5'
+
+		if (args['Batch Size']):
+			self.loss =  (args['Batch Size'])
+		else :
+			self.loss = '200'
+
 
 		if (args['Activation Function Layer 1']):
 			self.activation_1 =  (args['Activation Function Layer 1'])
@@ -92,6 +102,8 @@ def get_args():
 	parser.add_argument('Neural Network Selector', default=0, nargs='?' )
 	parser.add_argument('Optimizator', default='adam', nargs='?',  )
 	parser.add_argument('Loss Function', default='categorical_crossentropy', nargs='?',  )	
+	parser.add_argument('N Epochs', default='5', nargs='?',  )	
+	parser.add_argument('Batch Size', default='200', nargs='?',  )	
 	parser.add_argument('Activation Function Layer 1', default='relu', nargs='?')
 	parser.add_argument('Activation Function Layer 2', default='relu', nargs='?')
 	parser.add_argument('Activation Function Layer 3', default='relu', nargs='?')
@@ -372,7 +384,6 @@ def test5_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 
 
 
-
 if __name__ == '__main__':
 
 
@@ -386,16 +397,15 @@ if __name__ == '__main__':
 	
 
 	#Get model data from minst
-	X_train, y_train, X_test, y_test, num_pixels , num_classes= get_data(params.neural_network)
+	X_train, y_train, X_test, y_test, num_pixels , num_classes = get_data(params.neural_network)
 
 
 
-	test4_NN(params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
+	#test4_NN(params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 
-	test5_NN(params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
+	#test5_NN(params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 
-
-	"""
+	
 	# Build the model
 	if(params.neural_network=='simple_NN'):
 		model = simple_NN(params)
@@ -411,4 +421,4 @@ if __name__ == '__main__':
 
 	# Clean up
 	backend.clear_session()
-	"""
+	
