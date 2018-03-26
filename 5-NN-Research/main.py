@@ -209,7 +209,7 @@ def run_evaluation(model, X_train, y_train, X_test, y_test,params):
 	file_c = open('output_csv.txt', 'a')
 
 	write_label(file,params)
-	write_label_csv(file_c,params)
+	
 
 	start = time.time()
 
@@ -247,7 +247,8 @@ def run_evaluation(model, X_train, y_train, X_test, y_test,params):
 	file.write ("\t\n")
 
 	file_c.write ("%.2f%%" % (100-scores[1]*100)+ "\t")
-
+	write_label_csv(file_c,params)
+	
 	file.close()
 	file_c.close()
 	
@@ -407,7 +408,7 @@ if __name__ == '__main__':
 	#Get model data from minst
 	X_train, y_train, X_test, y_test, num_pixels , num_classes = get_data(params.neural_network)
 
-
+	"""
 	print (params.neural_network)
 	print ("\n")
 	print (params.optimizator)
@@ -418,7 +419,7 @@ if __name__ == '__main__':
 	print ("\n")
 	print (params.b_size)
 	print ("\n")
-
+	"""
 	#test4_NN(params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 
 	#test5_NN(params,X_train, y_train, X_test, y_test, num_pixels , num_classes)

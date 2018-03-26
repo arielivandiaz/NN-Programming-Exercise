@@ -1,1 +1,1 @@
-CUDA_VISIBLE_DEVICES=1  python main.py simple_CNN adam relu relu softmax
+CUDA_VISIBLE_DEVICES=1  python main.py simple_CNN nadam binary_crossentropy 5 15 relu relu softmax 
