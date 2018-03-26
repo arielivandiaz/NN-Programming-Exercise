@@ -51,14 +51,14 @@ class model_params():
 			self.loss = 'categorical_crossentropy'
 
 		if (args['N Epochs']):
-			self.n_epochs =  (args['N Epochs'])
+			self.n_epochs =  int(args['N Epochs'])
 		else :
-			self.n_epochs = '5'
+			self.n_epochs = 5
 
 		if (args['Batch Size']):
-			self.b_size =  (args['Batch Size'])
+			self.b_size =  int(args['Batch Size'])
 		else :
-			self.b_size = '200'
+			self.b_size = 200
 
 
 		if (args['Activation Function Layer 1']):
