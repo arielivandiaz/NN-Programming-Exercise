@@ -209,8 +209,8 @@ def run_evaluation(model, X_train, y_train, X_test, y_test,params):
 
 	start = time.time()
 
-	file_c.write(str(n_epochs)+"\t")
-	file_c.write(str(b_size)+"\t")
+	file_c.write(str(params.n_epochs)+"\t")
+	file_c.write(str(params.b_size)+"\t")
 	if model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=params.n_epochs, batch_size=params.b_size, verbose=2):
 		print ("all ok")
 
