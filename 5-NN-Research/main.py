@@ -65,7 +65,10 @@ class model_params():
 		if (args['Activation Function Layer 3']):
 			self.activation_3 =  (args['Activation Function Layer 3'])
 		else:
-			self.activation_3 = 'relu'
+			if (self.neural_network == 'Simple_CNN'):
+				self.activation_2= 'softmax'
+			else :
+				self.activation_2= 'relu'
 
 		if (args['Activation Function Layer 4']):
 			self.activation_4 =  (args['Activation Function Layer 4'])
