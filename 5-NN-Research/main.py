@@ -389,7 +389,7 @@ def test4_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 	params.loss=loss_function
 	for i in range (len(activations_1)):
 		params.activation_1=activations_1[i]
-		for j in range(1,20):				
+		for j in range(1,11):				
 			params.n_epochs=j
 			if(params.neural_network=='simple_NN'):
 				model = simple_NN(params)
@@ -457,7 +457,7 @@ if __name__ == '__main__':
 	print (params.b_size)
 	print ("\n")
 	"""
-	test1_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
+	test4_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 	
 	#test4_NN(params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 
