@@ -348,20 +348,27 @@ def test3_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 
 	#Best Activations for test1_NN
 	activations_1 = ['tanh','relu','selu','linear','elu']
-	params.activation_2 = 'softmax'
+	if(params.neural_network=='simple_NN'):
+		params.activation_2 = 'softmax'
+	elif (params.neural_network=='simple_CNN'):
+		params.activation_3 = 'softmax'
+	elif (params.neural_network=='large_CNN'):
+		params.activation_5 = 'softmax'	
 	params.optimizator='nadam'
 
 	loss_function = ['mean_squared_error','mean_absolute_error','mean_absolute_percentage_error','mean_squared_logarithmic_error','squared_hinge','hinge','categorical_hinge','logcosh','categorical_crossentropy','binary_crossentropy','kullback_leibler_divergence','poisson']
 
 	for i in range (len(activations_1)):
-		params.activation_1=activations_1[i]	
+		params.activation_1=activations_1[i]
 		for j in loss_function:				
 			params.loss=j
-			model = simple_NN(params)
-			if run_evaluation(model, X_train, y_train, X_test, y_test,params):
-				print ("all okey!")
-			else:
-				print ("NOT ALL OK =(")
+			if(params.neural_network=='simple_NN'):
+				model = simple_NN(params)
+			elif (params.neural_network=='simple_CNN'):
+				model = simple_CNN(params)
+			elif (params.neural_network=='large_CNN'):
+				model = large_CNN(params)
+			run_evaluation(model, X_train, y_train, X_test, y_test,params):
 			backend.clear_session()
 		backend.clear_session()
 	backend.clear_session()		
@@ -370,44 +377,56 @@ def test4_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 
 	#Best Activations for test1_NN
 	activations_1 = ['relu','selu','tanh','linear','elu']
-	params.activation_2 = 'softmax'
+	if(params.neural_network=='simple_NN'):
+			params.activation_2 = 'softmax'
+	elif (params.neural_network=='simple_CNN'):
+			params.activation_3 = 'softmax'
+	elif (params.neural_network=='large_CNN'):
+			params.activation_5 = 'softmax'
 	params.optimizator='nadam'
 
 	loss_function = 'binary_crossentropy'
-
+	params.loss=loss_function
 	for i in range (len(activations_1)):
-		params.activation_1=activations_1[i]	
+		params.activation_1=activations_1[i]
 		for j in range(1,20):				
-			params.loss=loss_function
-			model = simple_NN(params)
 			params.n_epochs=j
-			if run_evaluation(model, X_train, y_train, X_test, y_test,params):
-				print ("all okey!")
-			else:
-				print ("NOT ALL OK =(")
+			if(params.neural_network=='simple_NN'):
+				model = simple_NN(params)
+			elif (params.neural_network=='simple_CNN'):
+				model = simple_CNN(params)
+			elif (params.neural_network=='large_CNN'):
+				model = large_CNN(params)
+			run_evaluation(model, X_train, y_train, X_test, y_test,params):
 			backend.clear_session()
 
 def test5_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes):
 
 	#Best Activations for test1_NN
 	activations_1 = ['relu','selu','tanh','linear','elu']
-	params.activation_2 = 'softmax'
+	if(params.neural_network=='simple_NN'):
+			params.activation_2 = 'softmax'
+		elif (params.neural_network=='simple_CNN'):
+			params.activation_3 = 'softmax'
+		elif (params.neural_network=='large_CNN'):
+			params.activation_5 = 'softmax'
 	params.optimizator='nadam'
 
-	loss_function = 'binary_crossentropy'
+	params.loss = 'binary_crossentropy'
 
 	for i in range (len(activations_1)):
 		params.activation_1=activations_1[i]	
-		for j in range(25,500,25):				
-			params.loss=loss_function
-			model = simple_NN(params)
+		for j in range(25,500,25):						
+			if(params.neural_network=='simple_NN'):
+				model = simple_NN(params)
+			elif (params.neural_network=='simple_CNN'):
+				model = simple_CNN(params)
+			elif (params.neural_network=='large_CNN'):
+				model = large_CNN(params)
 			params.b_size=j
-			if run_evaluation(model, X_train, y_train, X_test, y_test,params):
-				print ("all okey!")
-			else:
-				print ("NOT ALL OK =(")
+			run_evaluation(model, X_train, y_train, X_test, y_test,params):
 			backend.clear_session()
-	
+
 
 
 
@@ -438,12 +457,12 @@ if __name__ == '__main__':
 	print (params.b_size)
 	print ("\n")
 	"""
-	test1_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
+	#test1_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 	#test4_NN(params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 
 	#test5_NN(params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 
-	"""
+	
 	# Build the model
 	if(params.neural_network=='simple_NN'):
 		model = simple_NN(params)
@@ -456,7 +475,7 @@ if __name__ == '__main__':
 
 	# Fit the model, run evaluation and get output file
 	run_evaluation(model, X_train, y_train, X_test, y_test,params)
-	"""
+	
 	# Clean up
 	backend.clear_session()
 	
