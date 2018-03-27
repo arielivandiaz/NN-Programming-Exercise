@@ -405,11 +405,11 @@ def test5_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 	#Best Activations for test1_NN
 	activations_1 = ['relu','selu','tanh','linear','elu']
 	if(params.neural_network=='simple_NN'):
-			params.activation_2 = 'softmax'
-		elif (params.neural_network=='simple_CNN'):
-			params.activation_3 = 'softmax'
-		elif (params.neural_network=='large_CNN'):
-			params.activation_5 = 'softmax'
+		params.activation_2 = 'softmax'
+	elif (params.neural_network=='simple_CNN'):
+		params.activation_3 = 'softmax'
+	elif (params.neural_network=='large_CNN'):
+		params.activation_5 = 'softmax'
 	params.optimizator='nadam'
 
 	params.loss = 'binary_crossentropy'
