@@ -9,7 +9,8 @@ from keras.layers.convolutional import MaxPooling2D
 from keras.utils import np_utils
 from keras import backend 
 backend.set_image_dim_ordering('th')
-
+#For run in single core
+backend.set_session(K.tf.Session(config=K.tf.ConfigProto(intra_op_‌​parallelism_threads=‌​32, inter_op_parallelism_threads=32)))
 
 from keras import backend
 
