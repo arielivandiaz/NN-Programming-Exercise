@@ -326,11 +326,21 @@ def test2_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 	op_function = ['sgd','rmsprop','adagrad','adadelta','adam','adamax','nadam']
 
 	for i in range (len(activations_1)):
-		params.activation_1=activations_1[i]
-		params.activation_2=activations_2[i]
+		params.activation_1=activations_1[i]		
+		if(params.neural_network=='simple_NN'):
+			params.activation_2=activations_2[i]
+		elif (params.neural_network=='simple_CNN'):
+			params.activation_3=activations_2[i]
+		elif (params.neural_network=='large_CNN'):
+			params.activation_5=activations_2[i]
 		for j in op_function:				
 			params.optimizator=j
-			model = simple_NN(params)
+			if(params.neural_network=='simple_NN'):
+				model = simple_NN(params)
+			elif (params.neural_network=='simple_CNN'):
+				model = simple_CNN(params)
+			elif (params.neural_network=='large_CNN'):
+				model = large_CNN(params)
 			run_evaluation(model, X_train, y_train, X_test, y_test,params)
 			backend.clear_session()
 
@@ -347,8 +357,6 @@ def test3_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 		params.activation_1=activations_1[i]	
 		for j in loss_function:				
 			params.loss=j
-			print (j)
-			print ("\n")
 			model = simple_NN(params)
 			if run_evaluation(model, X_train, y_train, X_test, y_test,params):
 				print ("all okey!")
