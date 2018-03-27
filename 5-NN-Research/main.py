@@ -368,7 +368,7 @@ def test3_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 				model = simple_CNN(params)
 			elif (params.neural_network=='large_CNN'):
 				model = large_CNN(params)
-			run_evaluation(model, X_train, y_train, X_test, y_test,params):
+			run_evaluation(model, X_train, y_train, X_test, y_test,params)
 			backend.clear_session()
 		backend.clear_session()
 	backend.clear_session()		
