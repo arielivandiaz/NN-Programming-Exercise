@@ -301,3 +301,36 @@ Optimization: nadam
 L1 : sigmoid 
 L2 : sigmoid 
 Loss : binary_crossentropy 
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : relu 
+L2 : softmax 
+Loss : binary_crossentropy 
+Training Time : 23.084644556045532	
+Evaluation Time : 2.250396490097046	
+Baseline Error: 2.36%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : relu 
+L2 : softmax 
+Loss : binary_crossentropy 
+Training Time : 60.50524187088013	
+Evaluation Time : 2.3471038341522217	
+Baseline Error: 1.78%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : relu 
+L2 : softmax 
+Loss : binary_crossentropy 
+Training Time : 82.93999028205872	
+Evaluation Time : 8.574729919433594	
+Baseline Error: 1.61%	
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : relu 
+L2 : softmax 
+Loss : binary_crossentropy 
