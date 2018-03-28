@@ -13,6 +13,7 @@ numpy.random.seed(seed)
 # load data
 (X_train, y_train), (X_test, y_test) = mnist.load_data()
 
+X_image= X_test
 
 # flatten 28*28 images to a 784 vector for each image
 num_pixels = X_train.shape[1] * X_train.shape[2]
@@ -51,5 +52,34 @@ model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=1, batch_si
 scores = model.evaluate(X_test, y_test, verbose=0)
 print("Baseline Error: %.2f%%" % (100-scores[1]*100))
 
-scores = model.evaluate(X_test[0], y_test[0], verbose=0)
-print("Baseline Error: %.2f%%" % (100-scores[1]*100))
+
+preds = model.predict(X_test, batch_size=200)
+
+def get_max(vector):
+	the_max=-1
+	i_max=-1
+
+	for i in range(len(vector)):
+		if the_max<vector[i]:
+			i_max=i
+			the_max=vector[i]
+	return i_max
+
+
+print(get_max(preds[0]))
+print("\n")
+print(get_max(preds[1]))
+print("\n")
+
+
+import matplotlib.pyplot as plt
+
+
+plt.subplot(223)
+plt.imshow(X_image[0], cmap=plt.get_cmap('gray'))
+plt.subplot(224)
+plt.imshow(X_image[1], cmap=plt.get_cmap('gray'))
+# show the plot
+plt.show()
+
+
