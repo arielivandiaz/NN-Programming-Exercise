@@ -10,7 +10,8 @@ from keras.utils import np_utils
 from keras import backend 
 backend.set_image_dim_ordering('th')
 #For run in single core
-backend.set_session(backend.tf.Session(config=backend.tf.ConfigProto(intra_op_‌​parallelism_threads=‌​32, inter_op_parallelism_threads=32)))
+
+backend.set_session(backend.tf.Session(config=backend.tf.ConfigProto(intra_op_parallelism_threads=1, inter_op_parallelism_threads=1)))
 
 from keras import backend
 
