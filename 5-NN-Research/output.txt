@@ -436,3 +436,12 @@ Optimization: nadam
 L1 : selu 
 L2 : softmax 
 Loss : binary_crossentropy 
+###############################################################
+Test: simple_NN 
+Optimization: nadam 
+L1 : relu 
+L2 : softmax 
+Loss : binary_crossentropy 
+Training Time : 3574.13741183	
+Evaluation Time : 0.738202095032	
+Baseline Error: 0.36%	
