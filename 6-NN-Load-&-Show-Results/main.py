@@ -257,6 +257,8 @@ def run_evaluation(model, X_train, y_train, X_test, y_test,params):
 
 	#Save the model in json model  & h5 files
 	save_model(model,params)
+	for i in range(len(model.metrics_names)):
+		print("%s: %.2f%%" % (model.metrics_names[i], scores[i]*100))
 
 #/********************************************************************************************* 
 def save_model (model,params):
