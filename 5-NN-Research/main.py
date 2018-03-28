@@ -8,6 +8,11 @@ from keras.layers.convolutional import Conv2D
 from keras.layers.convolutional import MaxPooling2D
 from keras.utils import np_utils
 from keras import backend 
+
+from keras.models import model_from_json
+import numpy
+import os
+
 backend.set_image_dim_ordering('th')
 #For run in single core
 
@@ -162,7 +167,7 @@ def large_CNN(params):
 	model.add(Dense(50, activation=params.activation_4))
 	model.add(Dense(num_classes, activation=params.activation_5))
 	# Compile model
-	model.compile(loss='categorical_crossentropy', optimizer=params.optimizator, metrics=['accuracy'])
+	model.compile(loss='categorical_crossentropy', optimizer=params.optimizator, metrics=['accuracy','mse', 'mae', 'mape', 'cosine'])
 	return model
 
 #/********************************************************************************************* 
@@ -198,6 +203,7 @@ def get_data (param):
 	num_classes = y_test.shape[1]
 
 	return 	X_train, y_train, X_test, y_test, num_pixels, num_classes
+
 
 
 #/********************************************************************************************* 
@@ -250,7 +256,30 @@ def run_evaluation(model, X_train, y_train, X_test, y_test,params):
 	
 	file.close()
 	file_c.close()
-	
+
+	#Save the model in json model  & h5 files
+	save_model(model,params)
+	for i in range(len(model.metrics_names)):
+		print("%s: %.2f%%" % (model.metrics_names[i], scores[i]*100))
+
+
+#/********************************************************************************************* 
+def save_model (model,params):
+	# serialize model to JSON
+	model_json = model.to_json()
+	with open("model.json", "w") as json_file:
+	    json_file.write(model_json)
+	# serialize weights to HDF5
+	model.save_weights("model.h5")
+
+	file = open('params.txt', 'w')
+	file.write(params.optimizator)
+	file.write('\n')
+	file.write(params.loss)
+	file.write('\n')
+	file.write(params.b_size)
+	file.write('\n')
+
 #/********************************************************************************************* 
 def write_label(file,params):
 
@@ -444,27 +473,13 @@ if __name__ == '__main__':
 	#Get model data from minst
 	X_train, y_train, X_test, y_test, num_pixels , num_classes = get_data(params.neural_network)
 
-	"""
-	print (params.neural_network)
-	print ("\n")
-	print (params.optimizator)
-	print ("\n")
-	print (params.loss)
-	print ("\n")
-	print (params.n_epochs)
-	print ("\n")
-	print (params.b_size)
-	print ("\n")
-	"""
-	#test4_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
-	
+
 	#test4_NN(params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 
 	#test5_NN(params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 
 	
 	# Build the model
-
 	if(params.neural_network=='simple_NN'):
 		model = simple_NN(params)
 		
