@@ -8,6 +8,7 @@ from keras.layers.convolutional import Conv2D
 from keras.layers.convolutional import MaxPooling2D
 from keras.utils import np_utils
 from keras import backend 
+
 from keras.models import model_from_json
 import numpy
 import os
@@ -166,7 +167,7 @@ def large_CNN(params):
 	model.add(Dense(50, activation=params.activation_4))
 	model.add(Dense(num_classes, activation=params.activation_5))
 	# Compile model
-	model.compile(loss='categorical_crossentropy', optimizer=params.optimizator, metrics=['accuracy'])
+	model.compile(loss='categorical_crossentropy', optimizer=params.optimizator, metrics=['accuracy','mse', 'mae', 'mape', 'cosine'])
 	return model
 
 #/********************************************************************************************* 
@@ -202,6 +203,7 @@ def get_data (param):
 	num_classes = y_test.shape[1]
 
 	return 	X_train, y_train, X_test, y_test, num_pixels, num_classes
+
 
 
 #/********************************************************************************************* 
@@ -260,6 +262,7 @@ def run_evaluation(model, X_train, y_train, X_test, y_test,params):
 	for i in range(len(model.metrics_names)):
 		print("%s: %.2f%%" % (model.metrics_names[i], scores[i]*100))
 
+
 #/********************************************************************************************* 
 def save_model (model,params):
 	# serialize model to JSON
@@ -268,7 +271,6 @@ def save_model (model,params):
 	    json_file.write(model_json)
 	# serialize weights to HDF5
 	model.save_weights("model.h5")
-	print("Saved model to disk")
 
 	file = open('params.txt', 'w')
 	file.write(params.optimizator)
