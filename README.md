@@ -6,10 +6,14 @@ In this repo it is proposed to solve the [MNIST](https://en.wikipedia.org/wiki/M
 # Folders
 
 **1-ImportData:** is an example of how to import the MNIST dataset.
+
 **2-SimpleNN:**  is a first example and very good approach to solve the problem using a single layer neural network.
+
 **3-SimpleCNN:** is a next example of how to use a convolutional neural network to solve the problem.
+
 **4-LargeCNN:** is an example of a Large CNN, a multi-layered convolutional neural network
 **5-NN-Research:** in this folder there is a complete program that allows to execute one of the 3 neural networks with the custom parameters. There is also the Test function package that was used to prepare the report. The final neural network is saved in a JSON and H5 format in order to be reused and evaluated by the content of the next folder.
+
 **6-NN-Load-&-Show-Results:** This folder contains a program that allows you to take a neural network stored in the format of the folder 5-NN-Research, run a prediction with this and store the outputs as image files, in the folder corresponding to the output obtained from the network.
 The image stored in folder "1" means that the network predicted that this image corresponds to digit one. The format of the name of the image is for example "img5_96P" where img5 specifies the number of the image and 96P that the probability was 96%.
 
