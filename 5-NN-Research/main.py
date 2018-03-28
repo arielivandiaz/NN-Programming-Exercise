@@ -456,7 +456,7 @@ if __name__ == '__main__':
 	print (params.b_size)
 	print ("\n")
 	"""
-	test4_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
+	#test4_NN (params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 	
 	#test4_NN(params,X_train, y_train, X_test, y_test, num_pixels , num_classes)
 
@@ -464,7 +464,7 @@ if __name__ == '__main__':
 
 	
 	# Build the model
-	"""
+
 	if(params.neural_network=='simple_NN'):
 		model = simple_NN(params)
 		
@@ -476,7 +476,7 @@ if __name__ == '__main__':
 
 	# Fit the model, run evaluation and get output file
 	run_evaluation(model, X_train, y_train, X_test, y_test,params)
-	"""
+	
 	# Clean up
 	backend.clear_session()
 	
