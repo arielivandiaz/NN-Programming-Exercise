@@ -26,3 +26,18 @@
 6	200	94.5752110481	1.30626296997	1.47%	Test: simple_NN 	Optimization: nadam 	L1 : tanh 	L2 : softmax 	loss : binary_crossentropy 	
 7	200	110.368957043	1.29629302025	1.47%	Test: simple_NN 	Optimization: nadam 	L1 : tanh 	L2 : softmax 	loss : binary_crossentropy 	
 8	200	125.62333703	1.30138301849	1.44%	Test: simple_NN 	Optimization: nadam 	L1 : tanh 	L2 : softmax 	loss : binary_crossentropy 	
+1	15	72.8254311085	0.736885786057	1.65%	Test: simple_NN 	Optimization: nadam 	L1 : relu 	L2 : softmax 	loss : binary_crossentropy 	
+2	15	143.923593044	0.736758947372	1.30%	Test: simple_NN 	Optimization: nadam 	L1 : relu 	L2 : softmax 	loss : binary_crossentropy 	
+3	15	215.130744219	0.735445976257	0.99%	Test: simple_NN 	Optimization: nadam 	L1 : relu 	L2 : softmax 	loss : binary_crossentropy 	
+4	15	287.122416973	0.734230995178	0.84%	Test: simple_NN 	Optimization: nadam 	L1 : relu 	L2 : softmax 	loss : binary_crossentropy 	
+5	15	358.679200888	0.755156040192	0.73%	Test: simple_NN 	Optimization: nadam 	L1 : relu 	L2 : softmax 	loss : binary_crossentropy 	
+6	15	430.321205139	0.74246096611	0.65%	Test: simple_NN 	Optimization: nadam 	L1 : relu 	L2 : softmax 	loss : binary_crossentropy 	
+7	15	501.112178087	0.729672908783	0.57%	Test: simple_NN 	Optimization: nadam 	L1 : relu 	L2 : softmax 	loss : binary_crossentropy 	
+8	15	573.277048111	0.730770111084	0.52%	Test: simple_NN 	Optimization: nadam 	L1 : relu 	L2 : softmax 	loss : binary_crossentropy 	
+9	15	642.71261096	0.728016853333	0.47%	Test: simple_NN 	Optimization: nadam 	L1 : relu 	L2 : softmax 	loss : binary_crossentropy 	
+10	15	715.858559132	0.721616029739	0.47%	Test: simple_NN 	Optimization: nadam 	L1 : relu 	L2 : softmax 	loss : binary_crossentropy 	
+1	15	73.7166731358	0.807900905609	1.64%	Test: simple_NN 	Optimization: nadam 	L1 : selu 	L2 : softmax 	loss : binary_crossentropy 	
+2	15	146.715543032	0.829369068146	1.38%	Test: simple_NN 	Optimization: nadam 	L1 : selu 	L2 : softmax 	loss : binary_crossentropy 	
+3	15	220.962218046	0.83402299881	1.52%	Test: simple_NN 	Optimization: nadam 	L1 : selu 	L2 : softmax 	loss : binary_crossentropy 	
+4	15	294.409051895	0.818413972855	1.24%	Test: simple_NN 	Optimization: nadam 	L1 : selu 	L2 : softmax 	loss : binary_crossentropy 	
+5	15	
