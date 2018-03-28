@@ -1,0 +1,2 @@
+nadam
+binary_crossentropy
